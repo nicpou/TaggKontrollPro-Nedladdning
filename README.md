@@ -12,6 +12,6 @@ Ladda ner zip-filen, packa upp och starta `TaggKontrollPro.exe`. Ingen installat
 Programmet får endast användas enligt Licens- och användarvillkoren för TaggKontroll Pro
 (VILLKOR.md i respektive version). Utan licenskod körs programmet i demoläge med högst 200 taggar.
 
-Kontakt och licenser: info@mindeu.se
+Kontakt och licenser: software@mindeu.se
 
 Copyright © 2026 Mindeu AB, org.nr 559596-5053. Alla rättigheter förbehållna.
