@@ -3,6 +3,37 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.26.0 – 2026-10-06
+
+### Viktigt vid uppgradering
+- Licens- och användarvillkoren version 1.6 (bland annat punkt 12.6 om beteckningslistor). Alla
+  användare godkänner villkoren på nytt vid första start.
+- TaggKontroll Pro som Windows-tjänst: efter byte till 1.26.0 startar tjänsten, men import och
+  agentdata nekas tills någon har godkänt villkoren i ett programfönster eller kört
+  `TaggKontrollPro.exe -installera-tjanst -godkann-villkor` som administratör (LÄS_MIG 4.5).
+- TaggKontrollAgent 1.3.1: tjänsten startar inte förrän
+  `TaggKontrollAgent.exe -installera-tjanst -godkann-villkor` har körts som administratör, med samma
+  skanningsflaggor som vid installationen (LÄS_MIG_AGENT avsnitt 4, Uppgradering).
+
+### Nytt
+- **Kolumnen BIP-kod:** programmet jämför varje taggs komponent med en beteckningslista och visar
+  koden i en egen kolumn, med filter, ett avsnitt i detaljpanelen, tre kolumner sist i Excel- och
+  CSV-exporten (BIP-kod, BIP-benämning, BIP-system) och ett avsnitt i rapporten.
+- Inbyggd lista: BIP-koder 3.0.2, ett urval av typ- och systembeteckningar ur BIP (förvaltas av
+  BIM Alliance Sweden). Välj vilka discipliner som ska ge träff; de som brukar finnas i
+  fastighetsautomation är förvalda. Koder med en bokstav matchas bara om du väljer det.
+- Egen lista: en nyare version eller fastighetsägarens egen beteckningslista kan läsas in som CSV-
+  eller Excelfil (Inställningar, kortet Beteckningslista). Varje inläsning sparas som en version.
+- Funktionen är avstängd från början, även i befintliga datamappar. Den slås på under Inställningar,
+  kortet Beteckningslista.
+- Hjälpvyn "Så föreslås namn" visar "Ej beräknad" i kolumnen Antal taggar när analysen behöver köras
+  om, med knappen Analysera om nedanför tabellen.
+
+### Ändrat
+- Beteckningslistan ändrar inga föreslagna namn, motiveringar eller bedömningar.
+- Excelfiler med ogiltiga cellreferenser eller radnummer över 1 048 576 nekas vid inläsning med ett
+  begripligt meddelande (beteckningslista och taggar ur Excel).
+
 ## 1.25.0 – 2026-10-06
 
 ### Nytt
