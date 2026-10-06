@@ -3,6 +3,38 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.27.0 – 2026-10-06
+
+### Viktigt vid uppgradering
+- Modellträdet kräver nu en giltig licens. I demoläget och när alla licenser gått ut visas fliken
+  utgråad med knappen "Licens…"; med giltig licens och överskridet taggtak fungerar den som förut.
+  Datamodellen kan ändå läsas in, analyseras och visas/exporteras under Datamodellversioner.
+- Vid första starten skapas ett index i gatewayloggen (några sekunder vid stora loggar); exporter
+  väntar under tiden. Första analysen efter uppgraderingen tar cirka 10 % längre (engångs).
+- 1.26.0 kan öppna en datamapp från 1.27.0. Har datamappen analyserats om i 1.26.0 medan
+  BIP-förslag var på, kör om analysen i 1.27.0 (programmet uppmanar till det).
+- Inga nya villkor.
+
+### Nytt
+- **Namnförslag enligt beteckningslistan (BIP)** där datamodellen saknar motsvarighet: ny inställning
+  under Inställningar → Beteckningslista, av från början, slås på efter en förhandsvisning som visar
+  vad som ändras. Ny bedömning "Rättad – enligt BIP" med egen färg, egen rad i fasetten och delsiffran
+  "varav enligt BIP n" under KPI:n Rättad. Datamodellen är alltid förstahandsval; BIP styr bara
+  komponentdelen. Motiveringen får källan "Beteckningslista" och hjälpvyn "Så föreslås namn" ett eget
+  avsnitt. Med inställningen av är resultatet identiskt med 1.26.0.
+- **Modellförslag med BIP:** nya typer namnges `K_<domän>_<BIP-kod>` och benämningen blir Description i
+  NodeSet2-filen när förslaget tas med i en version. Modellträdet visar BIP-kod när en lista är aktiv.
+- **Kontrollfråga vid export:** om taggar redan exporterats till Forge eller ett gatewaymål med ett
+  annat namn än det som nu föreslås visas dialogen "Tidigare exporterade namn ändras" med lista,
+  "Spara listan", "Skriv över" och "Avbryt". Jämförelsen görs i varje måls egen namnform. Forge-paketet
+  får `Namnbyten.csv` när byten finns.
+- **Panelavsnittet "Tidigare":** föregående förslag (namn, bedömning, modellversion, tidpunkt) och
+  senast exporterat namn per mål – visas bara när något skiljer.
+
+### Ändrat
+- BIP-förhandsvisningens varning räknar bara riktiga namnbyten per mål.
+- Bekräftelsen "Ta bort licens" låg bakom licensdialogen – rättad.
+
 ## 1.26.0 – 2026-10-06
 
 ### Viktigt vid uppgradering
