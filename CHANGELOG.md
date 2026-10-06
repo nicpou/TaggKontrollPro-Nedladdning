@@ -3,6 +3,35 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.28.0 – 2026-10-06
+
+### Viktigt vid uppgradering
+- Inga nya villkor.
+- Fliken Forge-batcher heter nu Export och samlar all taggexport; Exportera-dialogen är borttagen
+  (knappen Exportera i sidhuvudet öppnar fliken). Sparade flikval från äldre versioner öppnar Export.
+- Sammanslagning av stationer ligger nu under Inställningar; fliken Datakällor länkar dit.
+- 1.27.0 kan öppna en datamapp från 1.28.0; analyserar 1.27.0 om visar 1.28.0 sedan "Kör om analysen".
+
+### Nytt
+- **Namnregler** (Inställningar): alla programmets namnregler i grupper med klartextnamn, regel-ID,
+  beskrivning och antal taggar. 97 regler kan stängas av; strukturella regler, kontrollen mot
+  datamodellen och informationssteg är fasta med angiven orsak, följdregler följer sin huvudregel.
+  Sök, filter, "Alla på" per grupp, beroendedialog, förhandsvisning (övergångstabell, nya namn per
+  regel, krockar, modellförslag, exporterade taggar per mål) och "Spara och analysera om". Ändringar
+  loggas per regel. Med alla regler på är resultatet identiskt med 1.27.0.
+- Detaljpanelen visar steget "Avstängd namnregel" med länk till regeln; ny fasett "Avstängda
+  namnregler"; hjälpvyn får kolumnen Status och avsnittet "Stänga av regler"; rapporten och Excelns
+  sammanfattning nämner avstängda regler när någon är av.
+- **Fliken Export:** formatval Excel/CSV · Rapport · NodeSet · Forge-batcher · Gateway · Listor,
+  startar med Förvald export, statusrad för förval/ändrat val, knapprad som säger vad som exporteras,
+  samlad exporthistorik för Forge och gateway. Forge-batcher kan vara förvald export. Exportfiler
+  och exportloggar är byte för byte som i 1.27.0.
+
+### Ändrat
+- Kontrast: reglagen i läget Av och länkar i varningsrutor i mörkt tema.
+- Ångra i Forge-historiken är avstängd i läsläge.
+- Forge-kortet i fliken Export visas direkt även med flera hundra tusen taggar.
+
 ## 1.27.0 – 2026-10-06
 
 ### Viktigt vid uppgradering
