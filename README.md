@@ -7,6 +7,8 @@ SBOM (CycloneDX) och SHA-256-kontrollsummor.
 
 **Senaste version:** https://github.com/nicpou/TaggKontrollPro-Nedladdning/releases/latest
 
+**Vad som är nytt i varje version:** [CHANGELOG.md](CHANGELOG.md)
+
 Ladda ner zip-filen, packa upp och starta `TaggKontrollPro.exe`. Ingen installation krävs.
 
 Programmet får endast användas enligt Licens- och användarvillkoren för TaggKontroll Pro
