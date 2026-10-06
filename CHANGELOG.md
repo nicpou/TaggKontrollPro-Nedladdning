@@ -3,6 +3,24 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.28.1 – 2026-10-06
+
+### Rättat
+- Excel-import: en Excelfil med kolumnen Nod (och en enda nod) fick filnamnet som datakälla i
+  stället för noden i kolumnen, så att inlästa bilder inte matchade taggarna. Nu gäller kolumnen
+  Nod alltid; nodfältet i dialogen används bara när kolumnen saknas.
+
+### Nytt
+- Importdialogen föreslår kända iFIX-noder (bildernas noder först) och varnar om namnet inte är ett
+  iFIX-nodnamn eller inte finns bland de inlästa bilderna.
+- Kvittot visar varifrån noden kom och har knappen Koppla… när noden tagits ur filnamnet –
+  kopplingen datakälla → iFIX-nod ger bildanvändning utan ny import. Fliken Datakällor visar samma
+  anmärkning med länk.
+
+### Viktigt vid uppgradering
+- En Excelfil som tidigare lästs in under filnamnet som nod blir vid ny inläsning en ny datakälla
+  bredvid den gamla – ta bort den gamla under Datakällor.
+
 ## 1.28.0 – 2026-10-06
 
 ### Viktigt vid uppgradering
