@@ -3,6 +3,39 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.29.0 – 2026-10-07
+
+### Viktigt vid uppgradering
+- Inga nya villkor.
+- Fliken Datakällor heter Data. All inläsning startar med "Läs in…" i fliken eller i sidhuvudet
+  (hette "Importera data"). ⋮-menyn är grupperad (Data, System, Fönster); Flytt och säkerhetskopia
+  ligger under System.
+- Datamodellen kan ändras i modellträdet, men programmet ändrar aldrig PLC-projektet – det verktyg
+  som äger modellen är master. 1.28.x visar de nya ändringsslagen som hinder.
+
+### Nytt
+- **Inaktivera en datakälla** utan att ta bort den: taggar, rättningar, undantag och exportlogg
+  finns kvar men ingår inte i analys, filter, KPI eller exporter; räknas mot taggtaket; hamnar
+  aldrig på gatewayns borttagningslista. Chippet "Inaktiva källor"; Aktivera återställer exakt.
+- **Vyn Data:** Läs in… (Taggar, Datamodell, Från iFIX), kolumnerna Bilder och Hälsa, Agenter och
+  inkorg i vyn, rad om noder som bilderna refererar men som inte är inlästa.
+- **Ändra datamodellen i modellträdet:** ny typ, byt namn, byt bastyp, beskrivning, ta bort typ,
+  signaler och delobjekt, standardvärden – med motivering, löpnummer, logg, konsekvenskontroll
+  (hinder, varningar, extra bekräftelse vid NodeId-ändring), markeringar i trädet, Nästa
+  version-kortet, förhandsvisning och jämförelse med U-nr. Genererad NodeSet2 ändrar och tar bort
+  noder i befintlig fil med självtest. Typtilldelningen följer namnbyten.
+- **Metadata i detaljrutan** (standardvärden, dolda medlemmar, attribut, referenser), sökning i
+  metadata och raden "Modellfilen".
+- Supportpaketet anonymiserar ändringslistans namn, konton, motiveringar och standardvärden.
+
+### Ändrat
+- Hälsokontrollens sammanfattning sparas mellan ändringar.
+- Undantagsregler prövas bara mot aktiva källor.
+
+### Kända begränsningar
+- Valfria medlemmar, nya datatyper, kodvy och redigerbar kod kommer i 1.30.0; godkännandeflöde
+  (datamodellförvaltare) i 1.31.0.
+
 ## 1.28.1 – 2026-10-06
 
 ### Rättat
