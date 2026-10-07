@@ -3,6 +3,31 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.30.0 – 2026-10-07
+
+### Viktigt vid uppgradering
+- Inga nya villkor. Inget nytt i databasen eller flyttfilen; 1.29.0 kan öppna en datamapp från 1.30.0.
+- Uppgradering genom att byta ut TaggKontrollPro.exe rör aldrig brandväggen.
+- Brandväggsregeln "TaggKontroll Pro agentkanal" tas nu bara bort när den finns (vid
+  -installera-tjanst -brandvagg … och -avinstallera-tjanst). Tidigare kördes borttagningen alltid,
+  vilket kunde ge ett onödigt larm "regel borttagen" i Windows brandväggslogg. Utskriften anger om
+  regeln skapades, ersattes, inte fanns, eller om läget inte kunde avgöras (LÄS_MIG 3.5).
+
+### Nytt
+- Kodvyn i Modellträd (knappen Kod eller Alt+K, kräver licens): NodeSet2-koden för vald nod,
+  hela modellfilen eller en enskild ändring i Nästa version med markering + ~ − och U-nummer.
+  Sökning i hela filen med träfflista, Gå till rad, hopp mellan kod och träd, hopp mellan
+  ändringar, kopiera och ladda ner utsnitt. Klarar en modellfil på 200 MB (LÄS_MIG 7.10).
+
+### Ändrat och rättat
+- Medlemsnamnen i detaljrutans medlemslista syntes inte vid 1440/1920 px (sedan 1.29.0).
+- Mappen kodvy_tmp i datamappen (kodvyns arbetsyta) kan undantas från säkerhetskopior.
+
+### Kända begränsningar
+- U-nummer i kodvyn knyts till elementet, inte till enskilda rader.
+- "Visa koden" för en ändring som tar bort en medlem ger även notisen "Noden finns inte i
+  version X" – rättas i 1.31.0.
+
 ## 1.29.0 – 2026-10-07
 
 ### Viktigt vid uppgradering
