@@ -4,6 +4,17 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.32.1 – 2026-10-08
+
+Rättningsversion för er som har använt Ersätt användare i datamodellförvaltningen. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
+
+- Viktigt: har ni använt Ersätt användare med valet "Ersätt också i fritext" i 1.32.0, kontrollera motiveringar och kommentarer som nämner de ersatta personerna (LÄS_MIG 7.14). Hjälptexten under valet säger nu att fritexten inte kan ersättas i efterhand.
+- Rättat: Ersätt användare kunde ändra en annan användares namn i fritexter när namnen hade ett ord gemensamt (1.32.0). Det gällde också genitiv ("Anna Bergs"), dubbla mellanslag, radbrytning och annan versalisering. Nu lämnas andra användares namn orörda, och bytet med många skyddade namn går snabbare (LÄS_MIG 7.14).
+- Rättat: kontrollen efter Ersätt användare varnade "oväntat kvar" för ett förnamn som också var en annan användares namn, och klassade ett namn i ändringsloggen fel när fritextvalet var av. Den valda personens genitiv ("Annas") ersätts inte och redovisas nu under förväntat kvar som böjd form. Sådana förekomster syntes inte alls i 1.32.0 (LÄS_MIG 7.14).
+- Rättat: förhandsvisningen och "Visa koden" visar ändringarna i kortnamnen vid namnbyte och borttagning av en typ, och modellfilen blir snabbare att skapa när många typer tas bort. Statusraden under "Ej vald" visas hel i smala fönster (LÄS_MIG 7.10, 7.13).
+- Inte provat: Windows. Teamet har provat på en testserver med Linux. Prova i en testinstallation först om ni kör programmet som tjänst.
+- Inte provat: Ersätt användare i fritext visar bara genitiv på s och 's som böjd form i kontrollen. Den valda personens namn med bindestreck ("Anna-listan") ersätts inte och visas inte i kontrollen; andra användares namn skyddas även i sådana former. Kontrollera fritexter med sådana former efter bytet.
+
 ## 1.32.0 – 2026-10-08
 
 Ny funktionsversion för er som ändrar datamodellen i programmet eller ansvarar för personuppgifter i
