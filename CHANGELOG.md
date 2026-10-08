@@ -3,6 +3,27 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.31.1 – 2026-10-08
+
+Rättningsversion. Inga nya villkor, inget nytt i databasen eller flyttfilen.
+
+### Rättade fel
+- Tomt typnamn i Ny typ/Byt namn kunde ge en typ som bara hette prefixet ("K_"); stoppas nu (sedan 1.29.0).
+- "Ta bort typen" räknade inte referenser via alias – en typ som en global variabel använder kunde tas
+  bort; blockeras nu (sedan 1.29.0).
+- Namnbyte på en typ lämnade det gamla aliaset kvar i <Aliases>; alias följer nu namnbyte och borttagning,
+  och självtestet stoppar hängande/dubbla alias och referenser till alias som saknas (bara nya fall).
+- Metadata visade ett ModellingRule-alias som aliasnamnet i stället för "Optional (i=80)".
+- Typförslaget kunde föreslå namn med otillåtna tecken (t.ex. "m.fl"); namnet tvättas nu och underlaget
+  anger vad som ändrats.
+- Länkfärg i kolumnen Bilder (vyn Data) följer temat; vågrät rullning av hela sidan i vyn Taggar borta.
+
+### Nytt
+- BEROENDEN.txt: läsbar beroendeöversikt ur SBOM-filerna, ingår i varje leverans.
+
+### Kända begränsningar
+- Kodvyns förhandsvisning visar inte ändringar i <Aliases> vid namnbyte/borttagning (filen blir rätt).
+
 ## 1.31.0 – 2026-10-08
 
 ### Viktigt vid uppgradering
