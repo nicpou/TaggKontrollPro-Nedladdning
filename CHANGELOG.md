@@ -3,62 +3,53 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.31.1" till och med sista punkten under 1.31.0. Övriga poster och inledningen lämnas orörda. -->
+
 ## 1.31.1 – 2026-10-08
 
-Rättningsversion. Inga nya villkor, inget nytt i databasen eller flyttfilen.
+Rättningsversion för er som ändrar datamodellen i fliken Modellträd. Byt ut TaggKontrollPro.exe;
+data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
 
-### Rättade fel
-- Tomt typnamn i Ny typ/Byt namn kunde ge en typ som bara hette prefixet ("K_"); stoppas nu (sedan 1.29.0).
-- "Ta bort typen" räknade inte referenser via alias – en typ som en global variabel använder kunde tas
-  bort; blockeras nu (sedan 1.29.0).
-- Namnbyte på en typ lämnade det gamla aliaset kvar i <Aliases>; alias följer nu namnbyte och borttagning,
-  och självtestet stoppar hängande/dubbla alias och referenser till alias som saknas (bara nya fall).
-- Metadata visade ett ModellingRule-alias som aliasnamnet i stället för "Optional (i=80)".
-- Typförslaget kunde föreslå namn med otillåtna tecken (t.ex. "m.fl"); namnet tvättas nu och underlaget
-  anger vad som ändrats.
-- Länkfärg i kolumnen Bilder (vyn Data) följer temat; vågrät rullning av hela sidan i vyn Taggar borta.
-
-### Nytt
-- BEROENDEN.txt: läsbar beroendeöversikt ur SBOM-filerna, ingår i varje leverans.
-
-### Kända begränsningar
-- Kodvyns förhandsvisning visar inte ändringar i <Aliases> vid namnbyte/borttagning (filen blir rätt).
+- Rättat: en typ kunde få ett namn som bara var prefixet (till exempel K_) om namnfältet lämnades
+  tomt i "Ny typ" eller "Byt namn på typ" (LÄS_MIG 7.9).
+- Rättat: en typ som fortfarande användes av en global variabel i modellfilen kunde tas bort, och
+  filen fick då en hänvisning som inte gick att följa (LÄS_MIG 7.9).
+- Rättat: efter namnbyte på en typ fanns det gamla namnet kvar som kortnamn (alias) i modellfilen.
+- Rättat: "Förslag på ny typ" kunde föreslå ett namn med tecken som programmet sedan inte godtog
+  (LÄS_MIG 7.11).
+- Rättat: ofullständig text i Metadata, fel länkfärg i fliken Data i mörkt tema och sidledsrullning
+  av hela sidan i fliken Taggar.
+- Nytt: BEROENDEN.txt – läsbar förteckning över ingående bibliotek, för IT- och säkerhetsgranskning.
+- Inte provat: versionen på Windows. Kör ni programmet som tjänst, prova i en testinstallation först.
 
 ## 1.31.0 – 2026-10-08
 
-### Viktigt vid uppgradering
-- Inga nya villkor. Inget nytt i databasen eller flyttfilen; 1.30.0 kan öppna en datamapp från 1.31.0
-  (nya ändringsslag i Nästa version visas där som hinder tills de beslutas i 1.31.0).
-- Installationen av tjänsten (-installera-tjanst) ändrar aldrig brandväggen längre. Regeln
-  "TaggKontroll Pro agentkanal" skapas först när agentkanalen slås på, med kommandot
-  TaggKontrollPro.exe -brandvagg <adresser> som administratör; -brandvagg-bort tar bort den.
-  En regel som redan finns står kvar. -installera-tjanst -brandvagg … nekas (LÄS_MIG 3.5, 9.3).
-- Beroenden uppdaterade efter sårbarhetsskanning (bl.a. Excel-biblioteket excelize 2.11.0).
+Ny funktionsversion: programmet hjälper dig att bygga nya typer i datamodellen, och brandväggen
+ändras bara när du själv ber om det. Inga nya villkor och dina data behålls.
 
-### Nytt
-- Förslag på ny typ: dialog från trädet, från modellförslagen ("Ta med i nästa version") och från
-  taggens panel ("Föreslå typ…"), med underlaget "Så har förslaget byggts", namnförslag och
-  redigerbar NodeSet2-kod som kontrolleras rad för rad (LÄS_MIG 7.11).
-- Valfria medlemmar och nya datatyper: "Gör valfri"/"Gör obligatorisk" med kontroll enligt OPC UA,
-  märket "valfri" i trädet, filtret "Bara valfria", "Ny datatyp…" (uppräkning eller struktur med
-  variabeltyp, inklusive den binära ordboken) och "Visa koden" före beslut (LÄS_MIG 7.12).
-- Brandväggsstatus med färdigt kommando (Kommandotolken och PowerShell) under ⋮ → iFIX-agenter och i
-  vyn Data.
-
-### Ändrat och rättat
-- Namnbyte på en typ som ett delobjekt refererar till via alias stoppades av självtestet (sedan 1.29.0).
-- Kodvyn: ingen röd felnotis när nästa version saknar ändringar (sedan 1.30.0); "Visa koden" för en
-  borttagen medlem ger inte längre notisen "Noden finns inte i version X".
-- Ändringsdialogerna i trädet sparar utkast när de stängs oavsiktligt.
-- Excelexporter: kolumnbredder skrivs i rätt ordning med det nya Excel-biblioteket; filerna är i
-  övrigt lika med 1.30.0.
-
-### Kända begränsningar
-- Brandväggsdelen är inte provad på Windows av teamet.
-- Den genererade modellfilen är kontrollerad mot XSD och delvis med open62541, men inget oberoende
-  verktyg har läst in en fullständig kundfil.
-- Valfria medlemmar påverkar inte analys eller exporter (medvetet). Nästlade strukturer, listor och
-  ändring av befintliga datatyper ingår inte.
+- Viktigt: att installera programmet som Windows-tjänst öppnar inte längre brandväggen. Regeln för
+  iFIX-agenterna skapar du själv, när agenterna ska användas, med kommandot som visas färdigt under
+  ⋮ → "iFIX-agenter…". En regel som redan finns står kvar. Skript som kör
+  `-installera-tjanst -brandvagg` nekas och måste ändras (LÄS_MIG 3.5 och 9.3).
+- Nytt: Förslag på ny typ – programmet föreslår namn, bastyp och signaler för en ny typ (en mall i
+  datamodellen för en sorts komponent) utifrån taggar som saknar motsvarighet, och visar vad
+  förslaget bygger på. Fliken Modellträd → "+ Ny typ…", eller "Föreslå typ…" i taggens
+  detaljpanel. Kräver licens (LÄS_MIG 7.11).
+- Nytt: valfria signaler och nya datatyper – markera att alla instanser av en typ inte behöver ha
+  en viss signal eller ett visst delobjekt ("Gör valfri"), och lägg till uppräkningar (till exempel Av = 0, Auto = 1) och
+  enkla strukturer under Datatyper → "Ny datatyp…". Analysen och exporterna påverkas inte
+  (LÄS_MIG 7.12).
+- Nytt: brandväggsstatus under ⋮ → "iFIX-agenter…" och i fliken Data – programmet visar om regeln
+  för agenterna finns och ger ett kommando att kopiera till Kommandotolken eller PowerShell.
+- Säkerhet: biblioteket för Excelfiler är uppdaterat. Tidigare kunde en manipulerad Excelfil få
+  programmet att krascha vid inläsning.
+- Rättat: ändringsdialogerna i fliken Modellträd tappade det du hade skrivit om de stängdes av
+  misstag (Esc eller klick utanför). Nu sparas ett utkast som kommer tillbaka nästa gång.
+- Rättat: namnbyte på en typ som en annan typ använder som delobjekt kunde stoppas av programmets
+  kontroll av modellfilen.
+- Inte provat: brandväggsdelen på Windows, och Excelfilerna är inte öppnade i Microsoft Excel av
+  teamet. Kontrollera regeln i Windows Defender-brandväggen och öppna en exporterad fil innan du
+  lämnar den vidare.
 
 ## 1.30.0 – 2026-10-07
 
