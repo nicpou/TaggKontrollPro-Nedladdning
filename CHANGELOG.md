@@ -4,6 +4,26 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.32.0 – 2026-10-08
+
+Ny funktionsversion för er som ändrar datamodellen i programmet eller ansvarar för personuppgifter i
+det. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
+
+- Viktigt: godkännandet av ändringar är ett stöd för er interna kontroll, men inget
+  behörighetsskydd, och personer hos en uppdragsgivare kan inte vara förvaltare (LÄS_MIG 7.13).
+- Viktigt: har ni slagit på godkännandet, gå inte tillbaka till en äldre version. Den känner inte
+  till godkännandet och kan besluta en ny version utan det.
+- Nytt: godkännande av ändringar i datamodellen – varje ändring kan krävas godkänd av en annan
+  person (rollen Datamodellförvaltare) innan den tas med i en ny version. ⋮ → "Inställningar…" →
+  Modellförvaltning, av från början (LÄS_MIG 7.13).
+- Nytt: listan Nästa version kan filtreras på status, med "Före och efter" och "Logg" per ändring,
+  och historiken och ändringsförteckningen visar vem som godkände (LÄS_MIG 7.13).
+- Nytt: Ersätt användare – en persons namn och Windows-konto ersätts med till exempel "Tidigare
+  användare 1" i hela databasen, med förhandsvisning och kontroll efteråt. Kopior utanför databasen
+  gallras separat (LÄS_MIG 7.14).
+- Inte provat: versionen på Windows. Kör ni programmet som tjänst eller med lokala konton, prova i
+  en testinstallation först.
+
 ## 1.31.1 – 2026-10-08
 
 Rättningsversion för er som ändrar datamodellen i fliken Modellträd. Byt ut TaggKontrollPro.exe;
