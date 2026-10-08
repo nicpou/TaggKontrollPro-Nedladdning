@@ -4,6 +4,18 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.33.1 – 2026-10-08
+
+Rättningsversion för er som har använt Ersätt användare i datamodellförvaltningen, och för er som tar bort typer i fliken Modellträd. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
+
+- Viktigt: har ni använt Ersätt användare med valet "Ersätt också i fritext" i 1.32.1 eller 1.33.0, kontrollera motiveringar och kommentarer som nämner de ersatta personerna (LÄS_MIG 7.14).
+- Rättat: en ägandeform med typografisk apostrof, till exempel "Anna’s", kunde ersättas i fritext av Ersätt användare. Nu lämnas den orörd och redovisas i kontrollen (LÄS_MIG 7.14).
+- Rättat: kontrollen efter Ersätt användare redovisade ett längre valt namn som "annan användare" trots att det ersattes, och felmeddelandena om genitiv är tydligare (LÄS_MIG 7.14).
+- Rättat: Ta bort typ stoppades med "refereras av 1 nod i filen" när modellfilen skrev en referens med ett kortnamn i stället för den vanliga identiteten (LÄS_MIG 7.9).
+- Rättat: villkorsdialogen och Ersätt användare kunde inte användas i smala fönster eller med zoomad webbläsare (LÄS_MIG 7.14).
+- Inte provat: Windows. Teamet har provat på en testserver med Linux. Prova i en testinstallation först om ni kör programmet som tjänst.
+- Rättat: byte av bastyp i Modellträd tog inte bort den gamla bastypens referens när modellfilen skrev den med ett kortnamn, så typen kunde få två bastyper; självtestet upptäcker nu en sådan fil (LÄS_MIG 7.9).
+
 ## 1.33.0 – 2026-10-08
 
 Ny funktionsversion för er som tar fram migreringsrapporten. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
