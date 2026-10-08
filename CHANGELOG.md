@@ -3,7 +3,6 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
-## 1.31.1" till och med sista punkten under 1.31.0. Övriga poster och inledningen lämnas orörda. -->
 
 ## 1.31.1 – 2026-10-08
 
