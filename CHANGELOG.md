@@ -4,6 +4,16 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.33.0 – 2026-10-08
+
+Ny funktionsversion för er som tar fram migreringsrapporten. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
+
+- Viktigt: kommer ni från 1.32.0 gäller också rättningen i 1.32.1 (Ersätt användare, LÄS_MIG 7.14). Läs den posten.
+- Nytt: fliken Rapport visar migreringsrapporten på skärmen med innehållsförteckning, hopfällbara avsnitt och tabeller. Ett understruket antal öppnar taggarna i Taggar, och Tillbaka leder till rapporten (LÄS_MIG 8.3).
+- Nytt: Spara som HTML ger en fristående fil med innehållsförteckning och tabeller, som kan skrivas ut eller sparas som PDF i webbläsaren. Spara som text ger samma textfil som förut. Varje tabell kan sparas som CSV eller Excel i filformatet från Inställningar (LÄS_MIG 8.3, 8.9).
+- Inte provat: Windows. Teamet har provat på en testserver med Linux. Prova i en testinstallation först om ni kör programmet som tjänst.
+- Inte provat: utskrift till PDF är provad i Chromium, inte i Edge på Windows, och Excelfiler är inte öppnade i Microsoft Excel. Kontrollera utskriften och filen innan ni lämnar dem vidare.
+
 ## 1.32.1 – 2026-10-08
 
 Rättningsversion för er som har använt Ersätt användare i datamodellförvaltningen. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
