@@ -3,6 +3,42 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
+## 1.31.0 – 2026-10-08
+
+### Viktigt vid uppgradering
+- Inga nya villkor. Inget nytt i databasen eller flyttfilen; 1.30.0 kan öppna en datamapp från 1.31.0
+  (nya ändringsslag i Nästa version visas där som hinder tills de beslutas i 1.31.0).
+- Installationen av tjänsten (-installera-tjanst) ändrar aldrig brandväggen längre. Regeln
+  "TaggKontroll Pro agentkanal" skapas först när agentkanalen slås på, med kommandot
+  TaggKontrollPro.exe -brandvagg <adresser> som administratör; -brandvagg-bort tar bort den.
+  En regel som redan finns står kvar. -installera-tjanst -brandvagg … nekas (LÄS_MIG 3.5, 9.3).
+- Beroenden uppdaterade efter sårbarhetsskanning (bl.a. Excel-biblioteket excelize 2.11.0).
+
+### Nytt
+- Förslag på ny typ: dialog från trädet, från modellförslagen ("Ta med i nästa version") och från
+  taggens panel ("Föreslå typ…"), med underlaget "Så har förslaget byggts", namnförslag och
+  redigerbar NodeSet2-kod som kontrolleras rad för rad (LÄS_MIG 7.11).
+- Valfria medlemmar och nya datatyper: "Gör valfri"/"Gör obligatorisk" med kontroll enligt OPC UA,
+  märket "valfri" i trädet, filtret "Bara valfria", "Ny datatyp…" (uppräkning eller struktur med
+  variabeltyp, inklusive den binära ordboken) och "Visa koden" före beslut (LÄS_MIG 7.12).
+- Brandväggsstatus med färdigt kommando (Kommandotolken och PowerShell) under ⋮ → iFIX-agenter och i
+  vyn Data.
+
+### Ändrat och rättat
+- Namnbyte på en typ som ett delobjekt refererar till via alias stoppades av självtestet (sedan 1.29.0).
+- Kodvyn: ingen röd felnotis när nästa version saknar ändringar (sedan 1.30.0); "Visa koden" för en
+  borttagen medlem ger inte längre notisen "Noden finns inte i version X".
+- Ändringsdialogerna i trädet sparar utkast när de stängs oavsiktligt.
+- Excelexporter: kolumnbredder skrivs i rätt ordning med det nya Excel-biblioteket; filerna är i
+  övrigt lika med 1.30.0.
+
+### Kända begränsningar
+- Brandväggsdelen är inte provad på Windows av teamet.
+- Den genererade modellfilen är kontrollerad mot XSD och delvis med open62541, men inget oberoende
+  verktyg har läst in en fullständig kundfil.
+- Valfria medlemmar påverkar inte analys eller exporter (medvetet). Nästlade strukturer, listor och
+  ändring av befintliga datatyper ingår inte.
+
 ## 1.30.0 – 2026-10-07
 
 ### Viktigt vid uppgradering
