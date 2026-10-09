@@ -4,6 +4,22 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.35.0 – 2026-10-09
+
+Ny funktionsversion. Alla som använder programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe, och gärna TaggKontrollAgent.exe (1.3.3); databasen och flyttfilen fungerar som förut.
+
+- Viktigt: första starten bygger två larmindex i databasen (några sekunder). Har din datamodell referenser som är märkta som bakåt med citattecken eller blanksteg, kör analysen om. Stoppa tjänsten före bytet om du kör programmet som tjänst (LÄS_MIG avsnitt 3.4).
+- Nytt: förklaring av varje tagg och typ på svenska – kolumnen Förklaring, detaljpanelen och fliken Export (LÄS_MIG avsnitt 6.13).
+- Nytt: systemträd i filtren – teknikslag, systemserie och system, med Träd | Lista (LÄS_MIG avsnitt 6.1).
+- Nytt: filtren Larmområde och Larmprioritet och rapporten "Larm per station" (LÄS_MIG avsnitt 6.7 och 8.3).
+- Nytt: TaggKontrollPro.exe och TaggKontrollAgent.exe är signerade av Mindeu AB (LÄS_MIG avsnitt 3.1).
+- Rättat: installation och avinstallation av tjänsten väntade på en dialogruta utan skrivbord, till exempel över ssh (fanns i 1.34.2).
+- Rättat: misslyckad tjänstinstallation lämnade en halvfärdig tjänst, och agentparning vid gränsen på 200 kunde lämna tomma poster i agentlistan.
+- Rättat: motiveringen för signalnamn, "Krockar nu" efter manuell rättning, bakåtreferenser i datamodellen och exportknapparnas fördröjning efter licens.
+- Inte provat: Windows med riktiga Edge-fönster och filvalsdialoger – prova i en testinstallation först.
+- Inte provat: breda larmfilter (t.ex. Larm aktivt) tar längre tid för fasetterna än i 1.34.2 – vänta på resultatet i stället för att klicka igen.
+- Inte provat: generering av en ny version med ca 10 000 typer tar ca 7,6 s på Windows-testservern – mål 5 s, inte åtgärdat.
+
 ## 1.34.2 – 2026-10-09
 
 Rättningsversion. Byt bara TaggKontrollPro.exe. Uppgradera alla: demoläget kan inte längre exportera, och en säkerhetsbrist i nedladdningen av sparade zip-filer är rättad.
