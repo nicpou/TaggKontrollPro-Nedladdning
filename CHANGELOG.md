@@ -4,6 +4,18 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.34.1 – 2026-10-09
+
+Rättningsversion. Byt bara TaggKontrollPro.exe. Uppgradera om ni har en datamodell som skriver riktningen på kopplingar med 0 eller 1, eller om ni använder valideringen av datamodellen; övriga kan vänta.
+
+- Viktigt: har datamodellen en koppling som skriver riktningen med 0 eller 1, välj ⋮ → "Kör om analysen" efter uppgraderingen (LÄS_MIG 5.5).
+- Rättat: en typ tappade sin bastyp och sina ärvda signaler när modellfilen skrev riktningen med 0 eller 1 (1.34.0).
+- Rättat: en agent som togs bort eller spärrades medan den loggade in kunde läggas tillbaka i registret utan hemlighet. Vid 200 anslutna agenter förbrukade ett nytt parningsförsök koden i onödan, och en agent som inte var klar visades som ansluten (1.34.0, LÄS_MIG avsnitt 9).
+- Rättat: i valideringen gav "Försök igen" samma fel tills listan ändrades. Info-rader kunde stå kvar med "Läser fynden…", fokus hamnade fel efter Försök igen, och kolumnen Förval i profilkortet radbröts i upp till fem rader (1.34.0, LÄS_MIG avsnitt 7.15 och 8.9).
+- Rättat: kontrollen av Nästa version tar ungefär en minut i stället för två vid ca 10 000 typer. Hindret vid beslut är oförändrat (LÄS_MIG avsnitt 7.15).
+- Inte provat: Windows. Teamet har provat på en testserver med Linux. Prova i en testinstallation först om ni kör programmet som tjänst.
+- Inte provat: riktningen med 0 och 1 i en verklig datamodell. Kontrollera modellträdet efter analysen och kontakta software@mindeu.se om något ser fel ut.
+
 ## 1.34.0 – 2026-10-09
 
 Ny funktionsversion för dig som ändrar datamodellen. Byt ut TaggKontrollPro.exe; villkor och brandvägg påverkas inte. Agenten finns som 1.3.2 (ombyggd med Go 1.27.2, byt när det passar). Läs "Vad behöver jag göra?" i releasetexten först.
