@@ -4,6 +4,21 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.34.0 – 2026-10-09
+
+Ny funktionsversion för dig som ändrar datamodellen. Byt ut TaggKontrollPro.exe; villkor och brandvägg påverkas inte. Agenten finns som 1.3.2 (ombyggd med Go 1.27.2, byt när det passar). Läs "Vad behöver jag göra?" i releasetexten först.
+
+- Viktigt: första starten strukturerar befintliga modellversioner i bakgrunden. Programmet går att använda under tiden, och förloppet syns i Datamodellversioner (LÄS_MIG 7.2).
+- Viktigt: en datamapp från före 1.21.0 kan få en annan namnrymd för exporterade instanser. Kontrollera den i Inställningar före nästa export (LÄS_MIG 8.9, avsnitt 6).
+- Nytt: validering av datamodellen med fel, varningar och information per version, en rapport, märken i Modellträd och hinder vid beslut av en ny version (LÄS_MIG 7.15, 8.3).
+- Nytt: profil för Codesys eller generisk OPC UA per modellserie under Inställningar (LÄS_MIG 8.9).
+- Rättat: en agent som loggade in på nytt kunde få sin nya anslutning stängd under belastning, vilket gav ett kort avbrott. Felet fanns i 1.33.1 (LÄS_MIG avsnitt 9).
+- Rättat: namn från en kunds datamodell låg kvar i programmet och i TaggKontrollPro.exe. Nu är de borta, och dialogerna är generiska.
+- Säkerhet: programmeringsverktyget Go uppgraderat till 1.27.2, som rättar tio kända säkerhetsbrister. Felet fanns i 1.33.1.
+- Inte provat: Windows. Teamet har provat på en testserver med Linux. Prova i en testinstallation först om ni kör programmet som tjänst.
+- Provat: uppgradering från 1.33.1 med två versioner utan modellnamn. Från 1.33.0 är den inte provad. Ta en säkerhetskopia av datamappen före första starten.
+- Tar tid: kontrollen av en ändring i Nästa version kan ta ungefär 2 minuter på mycket stora modeller (ungefär 10 000 typer och 16 ändringar). Den körs i bakgrunden. Vänta på resultatet.
+
 ## 1.33.1 – 2026-10-08
 
 Rättningsversion för er som har använt Ersätt användare i datamodellförvaltningen, och för er som tar bort typer i fliken Modellträd. Byt ut TaggKontrollPro.exe; data, villkor, brandvägg och agenten på iFIX-noderna påverkas inte.
