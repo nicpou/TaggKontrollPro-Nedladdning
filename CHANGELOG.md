@@ -4,6 +4,15 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.34.2 – 2026-10-09
+
+Rättningsversion. Byt bara TaggKontrollPro.exe. Uppgradera alla: demoläget kan inte längre exportera, och en säkerhetsbrist i nedladdningen av sparade zip-filer är rättad.
+
+- Viktigt: demoläget (utan licenskod) kan inte längre exportera till fil. Excel, CSV, rapporter, NodeSet2-filer, Forge- och gateway-batcher och listorna kräver en giltig licens (LÄS_MIG avsnitt 10). Flyttfil och supportpaket går alltid att spara. Är licensen utgången kan datamodellversioner och sparade zip-filer fortfarande laddas ner.
+- Säkerhet: om en flyttfil hade ändrats kunde en sparad Forge- eller gateway-zip-fil peka på en fil utanför datamappen och laddas ner. Nu går det bara att ladda ner vanliga filer i exportmappen. Felet fanns sedan tidigare versioner. Inget känt kundfall.
+- Inte provat: versionen 1.34.2 har inte körts på Windows. Teamet har provat 1.34.1 på en Windows-testserver, men inte riktiga Edge-fönster eller filvalsdialoger – prova i en testinstallation först om ni kör som tjänst.
+- Inte provat: utgången licens i en riktig installation – arkivet och låsen är bara provade med automatiska tester. Ladda ner en datamodellversion och en zip-fil innan ni förlitar er på det.
+
 ## 1.34.1 – 2026-10-09
 
 Rättningsversion. Byt bara TaggKontrollPro.exe. Uppgradera om ni har en datamodell som skriver riktningen på kopplingar med 0 eller 1, eller om ni använder valideringen av datamodellen; övriga kan vänta.
