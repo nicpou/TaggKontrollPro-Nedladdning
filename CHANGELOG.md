@@ -4,6 +4,17 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.35.1 – 2026-10-12
+
+Rättningsversion. Byt TaggKontrollPro.exe; agenten (1.3.3), databasen, flyttfilen och villkoren (1.6) är oförändrade. Rekommenderas för alla med fler än 100 000 taggar.
+
+- Snabbare: sidopanelens antal vid filter räknas i gemensamma genomgångar – vid 315 000 taggar t.ex. Status 1,9 → 0,8 s, 50 valda system 3,6 → 0,7 s, Larmområde 1,1 → 0,3 s (LÄS_MIG avsnitt 14). Antalen är oförändrade.
+- Ändrat: regeltabellen "Så föreslås namn" och kortet Namnregler visas och ändras bara med giltig licens och är märkta "Konfidentiellt – ingår i licensen"; exporten av tabellen har en sekretessrad. Motiveringen per tagg och analysen är oförändrade (LÄS_MIG avsnitt 6.12 och 8.9.1).
+- Rättat: ingen vågrät rullning i Taggar vid telefonbredd; detaljpanelen ryms i fönstret.
+- Rättat: texten vid `-installera-tjanst` visar agentkanalens verkliga läge.
+- Rättat: exportlåset täcker larmrapportens tabeller och förklaringskolumnen; Forge-förhandsvisningen och batchen räknar på samma sätt (dokumenterat i LÄS_MIG 8.5).
+- Inte provat: filvalsdialoger och Windows 10/11; "Ej exporterade" med många exporter tar fortfarande ett par sekunder vid 315 000 taggar.
+
 ## 1.35.0 – 2026-10-09
 
 Ny funktionsversion. Alla som använder programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe, och gärna TaggKontrollAgent.exe (1.3.3); databasen och flyttfilen fungerar som förut.
