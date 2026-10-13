@@ -4,6 +4,17 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.35.2 – 2026-10-13
+
+Rättningsversion med fokus på säkerhet. Byt TaggKontrollPro.exe; agenten (1.3.3, samma kod, nysignerad), flyttfilen, licenserna och villkoren (1.6) är oförändrade. Rekommenderas för alla.
+
+- Säkerhet: Excelbiblioteket är uppdaterat och stänger 15 kända sårbarheter vid inläsning av trasiga eller elaka Excelfiler; en trasig fil ger ett fel med fel-id i stället för att programmet stannar. Nytt tak 256 MB per Excelfil.
+- Säkerhet: inlästa flyttfiler kontrolleras före bytet – storlekstak (4/1/8 GB), integritetskontroll, främmande utlösare/vyer avvisas; misslyckas bytet återställs datan. Uppladdningstak 2 GB (import) och ca 8 GB (flyttfil). Flyttfiler från tidigare versioner läses in som förut (LÄS_MIG avsnitt 11).
+- Snabbare: "Ej exporterade" och "Väntar på export" via en ny intern tabell – vid 315 000 taggar 2,4 → 0,5 s respektive 4–8 → ca 1,1 s; svaren oförändrade (LÄS_MIG avsnitt 14).
+- Rättat: filnamn med å, ä, ö i nedladdningar kodas korrekt.
+- Ändrat: Excelexportens interna stilmall har ny elementordning – giltig, men filerna är inte byte för byte lika 1.35.1.
+- Inte provat: Excelexporten i ett riktigt Excel; flyttimport tar 10–30 % längre tid; filvalsdialoger och Windows 10/11.
+
 ## 1.35.1 – 2026-10-12
 
 Rättningsversion. Byt TaggKontrollPro.exe; agenten (1.3.3), databasen, flyttfilen och villkoren (1.6) är oförändrade. Rekommenderas för alla med fler än 100 000 taggar.
