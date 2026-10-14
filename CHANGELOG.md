@@ -4,6 +4,24 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.36.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
+     Datumet 2026-10-15 rättas vid publicering om det ändras. -->
+
+## 1.36.0 – 2026-10-14
+
+Ny funktionsversion. Alla som använder bildanvändningen och iFIX-agenten berörs, men den är inte brådskande. Byt TaggKontrollPro.exe, kör om analysen och byt gärna TaggKontrollAgent.exe (1.4.0); databasen och flyttfilen fungerar som förut.
+
+- Viktigt: kör om analysen efter uppgraderingen. Taggar som börjar med HIST_COLL (Historian Collector) får då ingen station och räknas som systemtaggar. Uppgraderingen bryter öppna fönster en sista gång (LÄS_MIG avsnitt 3.4 och 4.1).
+- Viktigt: för förhandsbilder från iFIX-agenter, byt agenten till 1.4.0 och klicka på Fullständig skanning i agentlistan (LÄS_MIG avsnitt 9.5). Bilder som lästs in från mapp eller zip före 1.36.0 behöver läsas om.
+- Nytt: bildkort – en iFIX-bild visas som den såg ut vid senaste sparning, med taggar och referenser, utskrift och export av listan (LÄS_MIG avsnitt 6.8.1 och 6.8.2).
+- Nytt: förhandsbilder och bildtäckning per bildkälla under ⋮ → iFIX-agenter (LÄS_MIG avsnitt 6.8.3 och 9.7).
+- Nytt: fönstret fortsätter efter en omstart eller ett kort avbrott, och kolumnbredder i fliken Taggar går att ändra (LÄS_MIG avsnitt 4.1 och 6.1).
+- Nytt: en iFIX-CSV med flera noder delas per nod; stor datamodell skapas snabbare; `-version` i programmet (LÄS_MIG avsnitt 5.3, 7.16 och 12).
+- Nytt: SÄKERHETSPOLICY.md ingår i paketet – hur programmen utvecklas, kontrolleras och signeras.
+- Säkerhet: en särskilt konstruerad fil som såg ut som Excel kunde få programmet att stanna av minnesbrist; sådana filer avvisas nu. Ett manuellt stationsnamn kan inte längre ge mappdel i Forge-filnamn.
+- Rättat: tjänsten som inte startade visar nu orsaken; tom taggtabell vid snabb rullning; dolt fönster som frös i Edge; klippta kolumnrubriker; knapparna i agentlistan ryms (två rader).
+- Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge; bildkortet markerar inte taggens plats i bilden ännu – prova i en testinstallation först (LÄS_MIG avsnitt 14).
+
 ## 1.35.2 – 2026-10-13
 
 Rättningsversion med fokus på säkerhet. Byt TaggKontrollPro.exe; agenten (1.3.3, samma kod, nysignerad), flyttfilen, licenserna och villkoren (1.6) är oförändrade. Rekommenderas för alla.
