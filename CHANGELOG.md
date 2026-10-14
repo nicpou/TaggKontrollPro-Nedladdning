@@ -21,6 +21,7 @@ Ny funktionsversion. Alla som använder bildanvändningen och iFIX-agenten berö
 - Säkerhet: en särskilt konstruerad fil som såg ut som Excel kunde få programmet att stanna av minnesbrist; sådana filer avvisas nu. Ett manuellt stationsnamn kan inte längre ge mappdel i Forge-filnamn.
 - Rättat: tjänsten som inte startade visar nu orsaken; tom taggtabell vid snabb rullning; dolt fönster som frös i Edge; klippta kolumnrubriker; knapparna i agentlistan ryms (två rader).
 - Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge; bildkortet markerar inte taggens plats i bilden ännu – prova i en testinstallation först (LÄS_MIG avsnitt 14).
+- Paketet ersatt 2026-10-14 kl. 23:30: två olämpliga filnamnsexempel i LÄS_MIG avsnitt 8.5 utbytta mot neutrala; programfilerna oförändrade, ny kontrollsumma för zip-filen.
 
 ## 1.35.2 – 2026-10-13
 
