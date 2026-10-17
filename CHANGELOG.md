@@ -1,7 +1,7 @@
 # Ändringslogg – TaggKontroll Pro
 
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
-`LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
+`LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
 ## 1.37.0 – 2026-10-17
 
