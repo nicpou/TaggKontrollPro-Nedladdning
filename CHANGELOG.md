@@ -4,6 +4,17 @@ Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga bes
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
 
+## 1.37.0 – 2026-10-17
+
+Ny funktionsversion. Alla som använder bildanvändningen, har iFIX-servrar med omvända tecken i taggnamnen eller har mycket många stationer berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; databasen uppgraderas vid första starten, agenten (1.4.0) är oförändrad och du behöver inte köra om analysen.
+
+- Viktigt: databasen får en ny kolumn för korrigerade taggnamn vid första starten. Du kan gå tillbaka till 1.36.0 genom att byta tillbaka filen; har du slagit på den nya inställningen visar 1.36.0 bara namnen som de står i iFIX (LÄS_MIG avsnitt 6.3.1).
+- Nytt: fliken Bilder – alla inlästa bilder per nod med status, antal taggar, förhandsbild och iFIX-version, med sökning, filter, sortering och export; ingångar från Taggar, Data, Bildkällor och rapporten (LÄS_MIG avsnitt 6.1.1 och 6.8.1).
+- Nytt: Inställningar → "Felaktig namnsättning bindestreck/understreck" – vänder _ och - i taggnamn för valda datakällor, med förhandsvisning, märket ⇄, kolumnen "Namn i iFIX", filtret "Korrigerat namn" och kolumnen "Korrigerat namn" i exporterna. Avstängd från början (LÄS_MIG avsnitt 6.3.1 och 6.1).
+- Nytt: stationslistorna i Inställningar och Forge-batcher visar högst 200 rader och söker fram resten; "Markera alla" heter nu "Välj alla" och gäller alla stationer (LÄS_MIG avsnitt 6.3 och 8.5).
+- Rättat: Forge-förhandsvisning och -export med fler än 32 766 valda stationer gav fel; Forge-export med många stationer i en batch är mycket snabbare; programmet blev trögt efter ett besök i Inställningar eller Forge-batcher med tiotusentals stationer.
+- Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge. Med omvända tecken på alla noder tar omräkningen vid sparande omkring 10 s och omanalysen omkring 65 s vid 420 000 taggar; Namnbyten-listan läser fortfarande namnet i iFIX – prova i en testinstallation först (LÄS_MIG avsnitt 14).
+
 ## 1.36.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
      Datumet 2026-10-15 rättas vid publicering om det ändras. -->
 
