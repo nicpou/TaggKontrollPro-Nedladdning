@@ -3,7 +3,6 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. Bara den senaste versionen hålls tillgänglig under Releases.
 
-
 ## 1.37.0 – 2026-10-17
 
 Ny funktionsversion. Alla som använder bildanvändningen, har iFIX-servrar med omvända tecken i taggnamnen eller har mycket många stationer berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; databasen uppgraderas vid första starten, agenten (1.4.0) är oförändrad och du behöver inte köra om analysen.
@@ -14,9 +13,6 @@ Ny funktionsversion. Alla som använder bildanvändningen, har iFIX-servrar med 
 - Nytt: stationslistorna i Inställningar och Forge-batcher visar högst 200 rader och söker fram resten; "Markera alla" heter nu "Välj alla" och gäller alla stationer (LÄS_MIG avsnitt 6.3 och 8.5).
 - Rättat: Forge-förhandsvisning och -export med fler än 32 766 valda stationer gav fel; Forge-export med många stationer i en batch är mycket snabbare; programmet blev trögt efter ett besök i Inställningar eller Forge-batcher med tiotusentals stationer.
 - Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge. Med omvända tecken på alla noder tar omräkningen vid sparande omkring 10 s och omanalysen omkring 65 s vid 420 000 taggar; Namnbyten-listan läser fortfarande namnet i iFIX – prova i en testinstallation först (LÄS_MIG avsnitt 14).
-
-## 1.36.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
-     Datumet 2026-10-15 rättas vid publicering om det ändras. -->
 
 ## 1.36.0 – 2026-10-14
 
