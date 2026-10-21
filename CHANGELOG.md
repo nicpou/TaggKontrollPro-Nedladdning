@@ -3,6 +3,39 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.38.0 – 2026-10-21
+
+Ny funktionsversion. Alla som arbetar med rättningar i Excel, bekräftar namn, har många stationer eller
+använder bildanvändningen berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; den nya filen kan
+själv stoppa den körande versionen för alla, databasen uppgraderas vid första starten och du behöver inte
+köra om analysen. Agenten finns som ny version 1.5.0, men byte behövs bara för bildens struktur.
+
+- Viktigt: just vid uppgraderingen från 1.37.x måste alla användare öppna sina fönster igen, eftersom 1.37.x
+  inte sparar inloggningarna när den stoppas; från 1.38.0 behålls inloggningarna vid uppgradering (LÄS_MIG
+  avsnitt 4.5). Bilder som lästes in före 1.38.0 saknar strukturen och datakällornas namn tills bildkällan
+  läses om, och bilder från en agent kräver agent 1.5.0 och en fullständig skanning (LÄS_MIG avsnitt 6.8.1.2).
+- Nytt: Läs in… → "Rättningslista (Excel)…" – granskade Excellistor blir manuella rättningar, bekräftelser
+  och kommentarer, med kolumnval, förhandsvisning, konflikthantering och Ångra (LÄS_MIG avsnitt 6.2.4).
+- Nytt: "Bekräfta namnet" i detaljpanelen och ⋮ → "Bekräfta namnen i urvalet…" – granskade namn märks
+  Bekräftad och blir Inaktuell om namnet ändras; kolumn, filter och exportkolumner (LÄS_MIG avsnitt 6.2.2).
+- Nytt: ⋮ → "Manuella rättningar…" – alla manuella rättningar i en vy med läge, källa och förslag, annullering
+  av en eller många med förhandsvisning av påverkan, och Ångra (LÄS_MIG avsnitt 6.2.3).
+- Nytt: kommentar per tagg i detaljpanelen, med ikon, kolumn, filtret "Har kommentar" och kolumnen
+  Taggkommentar i exporten (LÄS_MIG avsnitt 6.2.1).
+- Nytt: namnregler per server och station – raden "Gäller:" under varje regel i Inställningar → Namnregler,
+  med Alla, "Valda…" och "Alla utom valda…", mönster och förhandsvisning (LÄS_MIG avsnitt 6.12.1).
+- Nytt: bildkortet visar bildens objekt som ett träd (Referenser ⇄ Struktur) och skriver med knappen "Visa
+  datakällor" datakällans namn i bilden i stället för iFIX platshållare (LÄS_MIG avsnitt 6.8.1.1 och 6.8.1.2).
+- Ändrat: fliken Bilder visar bara bilder som förval; globala skript och dynamouppsättningar visar du genom att
+  välja dem under Typ, och antalet på fliken, sökningen och exporten följer filtret (LÄS_MIG avsnitt 6.1.1).
+- Rättat: migreringsrapporten tog över 30 minuter med omkring 30 000 stationer (nu omkring 15 sekunder);
+  kortet Sammanslagning av stationer blockerade fönstret 8–15 sekunder efter sparade förslag; filtret Station
+  med mycket många valda stationer gjorde fönstret trögt.
+- Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge. Analysen tar 5–7 procent längre med
+  regelurval, antalen i sidopanelen kan ta några sekunder med filtret Bekräftad vid 420 000 taggar, och bildens
+  struktur är provad mot leverantörens exempelbilder, inte en anläggning i drift – prova i en testinstallation
+  först (LÄS_MIG avsnitt 14).
+
 ## 1.37.0 – 2026-10-17
 
 Ny funktionsversion. Alla som använder bildanvändningen, har iFIX-servrar med omvända tecken i taggnamnen eller har mycket många stationer berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; databasen uppgraderas vid första starten, agenten (1.4.0) är oförändrad och du behöver inte köra om analysen.
