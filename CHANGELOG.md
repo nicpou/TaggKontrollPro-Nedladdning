@@ -3,6 +3,20 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.38.1 – 2026-10-23
+
+Rättningsversion. Alla som läser in rättningslistor från Excel, har datamappen på en nätverksenhet eller har #, % eller ? i mappnamnet berörs. Byt TaggKontrollPro.exe; första starten räknar om avstängda namnregler innan fönstret öppnas, och inloggningarna avslutas först vid en nedgradering.
+
+- Viktigt: första starten efter uppgraderingen räknar om avstängda namnregler för alla taggar, ungefär tio sekunder vid 420 000 taggar, innan programfönstret öppnas (LÄS_MIG avsnitt 4.5).
+- Viktigt: vid nedgradering till 1.38.0 avslutas alla inloggningar, så alla måste logga in igen (LÄS_MIG avsnitt 4.5).
+- Nytt: namnregler som är av från början – regeln slås på per server och station, kortet visar hur många taggar den skulle gälla, och två nya regler, Platsnummer efter stationen och Komponentnummer med bokstav, är av från början (LÄS_MIG avsnitt 8.9.1).
+- Rättat: övertagandet av en äldre version tömmer inloggningarna direkt, så att gamla inloggningar inte kan gälla igen efter ett misslyckat övertagande (LÄS_MIG avsnitt 4.5).
+- Rättat: felvärden i Excel, som #N/A och #REF!, i rättningslistor blev felkoder i namn, person eller kommentar; nu hoppas raden över med orsak eller läses in utan den cellen (LÄS_MIG avsnitt 6.2.4).
+- Rättat: datamappen på en nätverksenhet eller ett USB-minne kunde krascha programmet vid ett läsfel, i stället för ett felmeddelande (LÄS_MIG avsnitt 3.2).
+- Rättat: databasen hamnade i fel fil när datamappen hade #, % eller ? i namnet. En tom databas efter uppgraderingen: kontakta supporten innan du gör något annat (LÄS_MIG avsnitt 3.2).
+- Rättat: filtren Har kommentar, Bekräftad och Avstängda namnregler svarar under en sekund vid 420 000 taggar, och Excel- och CSV-exporten med många bekräftelser använder ungefär 10 MB extra minne i stället för 120–170 MB (LÄS_MIG avsnitt 14).
+- Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge – prova i en testinstallation först, särskilt om ni kör programmet som tjänst (LÄS_MIG avsnitt 14).
+
 ## 1.38.0 – 2026-10-21
 
 Ny funktionsversion. Alla som arbetar med rättningar i Excel, bekräftar namn, har många stationer eller
