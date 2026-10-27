@@ -3,6 +3,24 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.39.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
+     Datumet i rubriken är publiceringsdagen (VD fyller i). -->
+
+## 1.39.0 – 2026-10-27
+
+Ny funktionsversion. Alla som rättar eller bekräftar namn och alla som kör programmet som tjänst berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; första starten räknar avstängda namnregler om i bakgrunden, och agenten 1.5.1 är ombyggd men agent 1.5.0 fungerar fortfarande. Databasmotorn är uppdaterad utan ändring av data, flyttfiler eller licenser.
+
+- Viktigt: vid start kan två notiser visas: om databasen innehåller delar som inte kommer från programmet (programmet fungerar som vanligt, kontakta supporten) och om en databas ligger utanför datamappen som har #, % eller ? i namnet (följ stegen, programmet flyttar inte filen) (LÄS_MIG avsnitt 3.2 och 15).
+- Nytt: rättningar och bekräftelser sparar det automatiska förslag som gällde när namnet ändrades, och Ångra tar med det; rättningar från tidigare versioner har inget sparat förslag (LÄS_MIG avsnitt 6.2).
+- Rättat: flytt-importen på Windows kunde avbrytas när en iFIX-agent skickade en skanning samtidigt eller strax efter start; importen väntar nu in det pågående arbetet (LÄS_MIG avsnitt 11).
+- Rättat: sparningar kunde i sällsynta fall misslyckas med "database is locked (517)", och att spara Felaktig namnsättning bindestreck/understreck med oförändrat värde kunde få programmet att hänga (LÄS_MIG avsnitt 6.3.1).
+- Rättat: massbekräftelsen och Forge-batcherna svarade "Begäran är för stor" vid stora stationsurval; nu lyckas de vid första klicket (LÄS_MIG avsnitt 6.2.2 och 8.5).
+- Rättat: avslut med ett bakgrundsjobb igång är klart inom ca 20 sekunder, och jobbet görs om vid nästa start (LÄS_MIG avsnitt 4.4).
+- Rättat: Exportstatus visar rätt även vid mycket stora exportloggar, Excel- och CSV-exporten sorterad på Status har fast ordning bland lika rader, och listan Namnbyten visar många stationer i cellen Urval (LÄS_MIG avsnitt 6.1 och 8.2).
+- Rättat: bildinläsning från mapp packar en struktur en gång även när samma bild finns flera gånger i en nod (felet fanns sedan 1.38.0), och en bild som inte kan lagras får status fel med orsak (LÄS_MIG avsnitt 9.10 och 5.6).
+- Rättat: vyn Manuella rättningar och filtren under Exportstatus och Larm aktivt svarar snabbare vid stora datamängder, och export och analys går något snabbare (LÄS_MIG avsnitt 6.1, 6.2.3 och 14).
+- Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge, och tiderna är uppmätta på teamets testserver med 420 000 taggar – prova i en testinstallation först, särskilt om ni kör programmet som tjänst (LÄS_MIG avsnitt 14).
+
 ## 1.38.1 – 2026-10-23
 
 Rättningsversion. Alla som läser in rättningslistor från Excel, har datamappen på en nätverksenhet eller har #, % eller ? i mappnamnet berörs. Byt TaggKontrollPro.exe; första starten räknar om avstängda namnregler innan fönstret öppnas, och inloggningarna avslutas först vid en nedgradering.
