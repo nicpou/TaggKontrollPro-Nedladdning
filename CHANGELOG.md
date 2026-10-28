@@ -3,9 +3,6 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
-## 1.40.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
-     Datumet i rubriken är publiceringsdagen (VD fyller i). -->
-
 ## 1.40.0 – 2026-10-28
 
 Ny funktionsversion. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; ingen omanalys behövs. Agenten är ombyggd som 1.5.2 och ska bytas för att maskeringen av lösenord i citattecken och klamrar ska gälla; första skanningen efter bytet läser om alla bilder. Databasmotorn och vissa bibliotek är uppdaterade utan ändring av data, flyttfiler eller licenser.
@@ -22,9 +19,6 @@ Ny funktionsversion. Alla som kör programmet berörs, men den är inte brådska
 - Rättat: datakällornas etiketter i bildkortet täcker inte längre platshållaren i bilden vid zoom 100, 200 och 400 % (LÄS_MIG avsnitt 6.8.1.2).
 - Rättat: agenten 1.5.2 maskerar användarnamn och lösenord i bildernas texter och VBA-kod också inom citattecken och klamrar (LÄS_MIG_AGENT.txt avsnitt 1).
 - Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge, Edge-etiketter i bildkortet, och tiderna är uppmätta på teamets testserver med ca 420 000 taggar – prova i en testinstallation först, särskilt om ni kör programmet som tjänst (LÄS_MIG avsnitt 14).
-
-## 1.39.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
-     Datumet i rubriken är publiceringsdagen (VD fyller i). -->
 
 ## 1.39.0 – 2026-10-27
 
