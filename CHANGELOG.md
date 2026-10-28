@@ -3,6 +3,26 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.40.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
+     Datumet i rubriken är publiceringsdagen (VD fyller i). -->
+
+## 1.40.0 – 2026-10-28
+
+Ny funktionsversion. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; ingen omanalys behövs. Agenten är ombyggd som 1.5.2 och ska bytas för att maskeringen av lösenord i citattecken och klamrar ska gälla; första skanningen efter bytet läser om alla bilder. Databasmotorn och vissa bibliotek är uppdaterade utan ändring av data, flyttfiler eller licenser.
+
+- Viktigt: agenten 1.5.2 läser om alla bilder vid första skanningen efter uppdateringen, så den tar längre tid (LÄS_MIG_AGENT.txt avsnitt 1 och 4). Analysen använder tillfälligt ca 0,5 GB mer arbetsminne när den sparar resultatet, och Excelfiler skrivs tillfälligt i datamappen (upp till ca 1 GB ledigt utrymme vid en stor tagglista eller export) (LÄS_MIG avsnitt 5.5 och 6.2.4).
+- Snabbare: analysen sparar sitt resultat på ungefär halva tiden vid stora datamängder, taggtabellen och filtren under Exportstatus visar antalen på några tiondels sekund vid ca 420 000 taggar, och fasetterna räknas inte om efter varje sparad filterändring (LÄS_MIG avsnitt 5.5 och 6.1).
+- Ändrat: bildkortet visar datakällor bara där kopplingen till platshållaren är säker; övriga visas i Struktur som "kunde inte kopplas säkert". Kopplingen sker i bakgrunden och blockerar inte längre flytt eller avslut (LÄS_MIG avsnitt 6.8.1.2).
+- Ändrat: Excelfiler med orimliga talformat eller mycket text i en cell nekas med ett besked. Rättningslistor får högst två minuter per uppladdning (LÄS_MIG avsnitt 6.2.4 och 14).
+- Ändrat: flyttfiler som har ändrats utanför programmet kontrolleras innan de tas i bruk; ogiltiga rader läses inte in och en fil vars index inte stämmer avvisas, med notis om antalen (LÄS_MIG avsnitt 11).
+- Rättat: massbekräftelse, inläsning av rättningslistor och annullering fungerar också när namn eller kommentarer är lagrade i ett ovanligt format. "Markera alla" annullerar alla rättningar i urvalet. Undantag, gateway-export, Forge-batcher och massbekräftelse klarar mycket stora stationsurval (LÄS_MIG avsnitt 6.2.3, 6.5 och 8.5).
+- Rättat: avslut under start, till exempel första starten efter en uppgradering, är klart inom ca 19 sekunder och görs om vid nästa start (LÄS_MIG avsnitt 4.4).
+- Rättat: feltexter med hänvisning till menyval som inte finns pekar nu på rätt meny; supportpaketet visar arbetsminne och databasstorlek (LÄS_MIG avsnitt 15 och 15.3).
+- Rättat: databasmotorn är uppdaterad till SQLite 3.54.1, och ett HTML-bibliotek som programmet inte använder har två kända sårbarheter rättade. Inga funktioner, exporter eller flyttfiler ändras (LÄS_MIG avsnitt 15.3).
+- Rättat: datakällornas etiketter i bildkortet täcker inte längre platshållaren i bilden vid zoom 100, 200 och 400 % (LÄS_MIG avsnitt 6.8.1.2).
+- Rättat: agenten 1.5.2 maskerar användarnamn och lösenord i bildernas texter och VBA-kod också inom citattecken och klamrar (LÄS_MIG_AGENT.txt avsnitt 1).
+- Inte provat: Windows 10/11, filvalsdialoger och högkontrastläge, Edge-etiketter i bildkortet, och tiderna är uppmätta på teamets testserver med ca 420 000 taggar – prova i en testinstallation först, särskilt om ni kör programmet som tjänst (LÄS_MIG avsnitt 14).
+
 ## 1.39.0" till och med sista punkten. Övriga poster och inledningen lämnas orörda.
      Datumet i rubriken är publiceringsdagen (VD fyller i). -->
 
