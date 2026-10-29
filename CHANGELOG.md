@@ -3,6 +3,19 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.41.0 – 2026-10-30
+
+Ny funktionsversion. Huvudnyheten är en stationslista som läses in från kundens lista över stationer. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe. Efter uppdateringen körs analysen om en gång, eftersom stationerna räknas om. Agenten är oförändrad (1.5.2) och behöver inte bytas. Villkoren är oförändrade (1.6).
+
+- Viktigt: efter uppdateringen visar programmet "Kör om analysen" en gång, eftersom namnregeln Station ur beskrivningen är på från början. Sparade filter som pekar på en nummerstation, t.ex. A10001, ger inga träffar efter omanalysen; välj i stället stationen ur beskrivningen, t.ex. QQA (LÄS_MIG avsnitt 6.3.2).
+- Nytt: stationslistan. Kundens lista över stationer läses in från Excel eller CSV under Inställningar, med förhandsvisning före sparning, visning, export och borttagning. Listan följer med i flyttfilen och påverkar inga namnförslag (LÄS_MIG avsnitt 8.9.2).
+- Nytt: trafikslag i taggtabellen när en stationslista är inläst. Filtret Trafikslag ligger under Station, och kolumnen Trafikslag slås på under tabellens ⋮. Trafikslaget skrivs inte i någon export (LÄS_MIG avsnitt 6.1 och 8.5).
+- Nytt: namnregeln Station ur beskrivningen. Taggar vars namn börjar med en nummerkod räknas till stationen i beskrivningen, t.ex. QQA från "QQA-10001, Driftberedd". Namn, föreslaget namn, bedömning och motivering ändras inte (LÄS_MIG avsnitt 6.3.2).
+- Ändrat: Exporthistoriken visar rader i exportloggen som hör till en Forge-körning som saknas, med antal taggar. Raderna kan tas bort med Städa bort…, så att taggarna räknas som ej exporterade (LÄS_MIG avsnitt 8.5).
+- Rättat: en beteckningslista (BIP) som slås på medan en analys sparar sitt resultat gör inte längre analysen några sekunder senare klar; kolumnen BIP-kod räknas om direkt efter analysen (LÄS_MIG avsnitt 6.13).
+- Rättat: historiken över undantag och gatewayexporter sparar inte hela stationslistan för varje körning när fler än 500 stationer är valda. Databasen växer inte med stationslistan, och äldre rader läses som förut.
+- Inte provat: filtret "(Ej i stationslistan)" tar vid ca 420 000 taggar upp till ca 1 sekund i filterpanelen. Prova uppgraderingen i en testinstallation först, särskilt om ni kör programmet som tjänst (LÄS_MIG avsnitt 6.1).
+
 ## 1.40.0 – 2026-10-28
 
 Ny funktionsversion. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe; ingen omanalys behövs. Agenten är ombyggd som 1.5.2 och ska bytas för att maskeringen av lösenord i citattecken och klamrar ska gälla; första skanningen efter bytet läser om alla bilder. Databasmotorn och vissa bibliotek är uppdaterade utan ändring av data, flyttfiler eller licenser.
