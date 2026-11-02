@@ -3,6 +3,21 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.43.0 – 2026-11-02
+
+Ny funktionsversion. Huvudnyheten är att fasetten Station kan visa bara stationerna i stationslistan. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe. Ingen omanalys behövs, men om namnregeln Station ur beskrivningen är på ber programmet om "Kör om analysen" en gång. Namnförslagen ändras inte. Agenten är ny (1.5.3): tvätten av loggarna i agentens supportpaket är förbättrad och INNEHALL.txt anger antalet utelämnade rader – byt den när det passar, den gamla fungerar vidare. Villkoren är oförändrade (1.6).
+
+- Nytt: fasetten Station visar med en stationslista bara listans stationer, med "(Ej i stationslistan)" överst. Stationer som slagits samman med en station i listan räknas med, och knappen Större ruta gör rutan högre (LÄS_MIG avsnitt 6.1, 8.9.2).
+- Rättat: sökning med versaler. Ett sökord med minst en versal söker skiftlägeskänsligt, ett helt gement sökord söker som förut. Sparade filter med versaler i sökordet kan ge färre träffar efter uppgraderingen, så kontrollera dem (LÄS_MIG avsnitt 6.1, 6.3, 6.12.1, 8.5).
+- Rättat: namnregeln Station ur beskrivningen räknar en tagg till stationen bara när stationen i beskrivningen är skriven med versaler och är exakt lika med en känd station. Samma regel gäller trafikslagen och stationslistans vy. Analysen ber om "Kör om analysen" en gång när regeln är på. Namnförslagen ändras inte (LÄS_MIG avsnitt 6.1, 6.3.2).
+- Rättat: knapparna på taggraden. Radredigeraren stängs inte i förtid medan en rättning sparas, fokuset på ✓ och ✎ står kvar, redigeraren syns alltid helt och Esc-ordningen följer det som ligger överst (LÄS_MIG avsnitt 6.1).
+- Rättat: markeringen av rader. Ett nytt Shift-klick avbryter den föregående hämtningen, och Esc stänger det som ligger överst innan markeringen töms (LÄS_MIG avsnitt 6.1).
+- Rättat: när en kollega har bekräftat och rättat samma tagg under tiden frågar programmet om båda ska skrivas över, i stället för att skriva över dem utan fråga (LÄS_MIG avsnitt 6.1, 6.2).
+- Rättat: ingen licensvarning när varje utgång inom varningstiden följs av en inläst licens utan glapp och taggtaket räcker (LÄS_MIG avsnitt 10).
+- Rättat: supportpaketet ersätter namn också inuti ord, när de är URL-kodade, vid "+" i frågesträngar och när å, ä och ö är skrivna med kombinerande tecken. En rad där två namn överlappar utelämnas, och INNEHALL.txt anger antalet. Spärren rymmer högst 2 000 000 namn (LÄS_MIG avsnitt 15.3).
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast (standardtexten). Prova uppgraderingen i en testinstallation först, särskilt om ni kör programmet som tjänst.
+- Känd begränsning: Shift-markering djupt i listan, sorterad på Beskrivning, kan ta några sekunder vid mycket stora datamängder. Förhandsvisningen av namnregeln bindestreck/understreck kan ta upp till ca 1 sekund extra när många taggar har nummerkod. Filtret "(Ej i stationslistan)" tar upp till ca 1 sekund vid ca 420 000 taggar om stationslistan har fler än 1 000 stationer (LÄS_MIG avsnitt 6.1).
+
 ## 1.42.0 – 2026-11-02
 
 Ny funktionsversion. Huvudnyheten är att namn kan bekräftas och rättas direkt på taggraden, och att flera markerade rader kan bekräftas samtidigt. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe. Ingen omanalys behövs, och databasen är oförändrad. Agenten är ombyggd men oförändrad (1.5.2) och behöver inte bytas. Villkoren är oförändrade (1.6).
