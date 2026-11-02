@@ -3,6 +3,23 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.42.0 – 2026-11-02
+
+Ny funktionsversion. Huvudnyheten är att namn kan bekräftas och rättas direkt på taggraden, och att flera markerade rader kan bekräftas samtidigt. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe. Ingen omanalys behövs, och databasen är oförändrad. Agenten är ombyggd men oförändrad (1.5.2) och behöver inte bytas. Villkoren är oförändrade (1.6).
+
+- Nytt: knapparna ✓ Bekräfta och ✎ Rätta på varje taggrad. ✓ bekräftar namnförslaget som det står, oavsett bedömning, och kvittot har Ångra i 10 sekunder. ✎ öppnar en redigerare på raden med namnkontroll. Kolumnen kan döljas under tabellens ⋮ (LÄS_MIG avsnitt 6.1, 6.2.2).
+- Nytt: markera flera rader med Ctrl- och Shift-klick och bekräfta dem med högerklick på markeringen. Bekräftelsen sparas som en körning i Rättningshistoriken och kan ångras där. Högst 10 000 rader kan markeras (LÄS_MIG avsnitt 6.1, 6.2, 6.2.2, 6.2.3).
+- Rättat: vid en rättning med "Bekräfta namnet" frågar programmet om en kollega har bekräftat taggnamnet under tiden, i stället för att skriva över bekräftelsen utan fråga. Gäller också ✎ på taggraden (LÄS_MIG avsnitt 6.2).
+- Rättat: supportpaketet blir klart också när databasen har mycket många olika namn. Namn som inte hinner få alias utelämnas hellre än att visas otvättade, även inuti ord och URL-kodade namn. INNEHALL.txt anger antalet utelämnade rader (LÄS_MIG avsnitt 15.3).
+- Rättat: valet "(Ej i stationslistan)" i filtret Trafikslag svarar lika snabbt som övriga fasetter när stationslistan har högst 1 000 stationer (LÄS_MIG avsnitt 6.1).
+- Rättat: migreringsrapportens tabell Skillnader mellan stationer räknar unika taggnamn per station. Antalen är lika med fasetten Station när ett taggnamn bara finns på en nod (LÄS_MIG avsnitt 8.3).
+- Rättat: en ny Forge-export tar aldrig över föräldralösa batcher eller körningar, och Ångra av en export tar bara bort det exporten skrev (LÄS_MIG avsnitt 8.5).
+- Rättat: stationslistan. Ersätt fungerar efter en flyttfil med avvikande metadata, ett fel före exporten ger ett felmeddelande i stället för en tom fil, och en CSV-fil med en titelrad som innehåller "kod" läses in (LÄS_MIG avsnitt 8.9.2).
+- Rättat: förhandsvisningen av namnregeln bindestreck/understreck räknar också stationerna ur beskrivningen (LÄS_MIG avsnitt 6.3.1).
+- Rättat: Rättningshistoriken sparar inte hela stationslistan för varje massbekräftelse när fler än 500 stationer är valda. Databasen växer inte i onödan.
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast (standardtexten). Prova uppgraderingen i en testinstallation först, särskilt om ni kör programmet som tjänst.
+- Känd begränsning: Shift-markering djupt i listan, sorterad på Beskrivning, kan ta några sekunder vid mycket stora datamängder. Förhandsvisningen av namnregeln bindestreck/understreck kan ta upp till ca 1 sekund extra när många taggar har nummerkod. Filtret "(Ej i stationslistan)" tar upp till ca 1 sekund vid ca 420 000 taggar om stationslistan har fler än 1 000 stationer (LÄS_MIG avsnitt 6.1).
+
 ## 1.41.0 – 2026-10-30
 
 Ny funktionsversion. Huvudnyheten är en stationslista som läses in från kundens lista över stationer. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe. Efter uppdateringen körs analysen om en gång, eftersom stationerna räknas om. Agenten är oförändrad (1.5.2) och behöver inte bytas. Villkoren är oförändrade (1.6).
