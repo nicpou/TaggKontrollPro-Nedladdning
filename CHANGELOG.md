@@ -3,6 +3,21 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.44.0 – 2026-11-04
+
+Ny funktionsversion med stationsnummer i stationslistan; alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe – ingen omanalys behövs, och den nya agenten (1.5.4) kan bytas när det passar.
+
+- Nytt: stationslistan kan få kolumnen Nummer; taggar med nummerkod räknas till stationen på numrets listrad (namnregeln Station ur stationsnumret), och kolumnen Transportsystem visar typen, t.ex. Hiss (LÄS_MIG avsnitt 6.3.2, 6.1, 8.9.2).
+- Nytt: analysens kvitto och vyn Visa listan… visar hur många taggar som räknats ur stationsnumret och vilka nummer som saknas i listan, med egen export (LÄS_MIG avsnitt 6.3.2, 8.9.2).
+- Rättat: supportpaketen tål specialtecken – namn med osynliga tecken, fullbreddstecken eller accenter ersätts också, och raden utelämnas hellre än att namnet skrivs ut. Det gäller också ett namn med å, ä eller ö som står utan dem. Agenten ersätter också ett taggnamn i en kommentarrad i iFIX-exporten. Felet fanns i agenten 1.5.3 (LÄS_MIG avsnitt 15.3, LÄS_MIG_AGENT.txt avsnitt 11.1).
+- Rättat: massbekräftelse av många markerade rader med ett filter ger ett tydligt besked i stället för ett oklart fel när anropet blir för stort (LÄS_MIG avsnitt 6.1).
+- Rättat: licensbannern och licensdialogen säger när nästa licens börjar, om det blir ett glapp innan den tar vid (LÄS_MIG avsnitt 10).
+- Rättat: förhandsvisningen av stationslistan visar fel före upplysningar och slår ihop fler än fem upplysningar om gemener till en rad (LÄS_MIG avsnitt 8.9.2).
+- Rättat: kolumnen Förklaring visar förklaringen i stället för "–" efter omladdning (F5) eller Bakåt och Framåt (LÄS_MIG avsnitt 6.13).
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast (standardtexten) – prova uppgraderingen i en testinstallation först, särskilt om ni kör programmet som tjänst.
+- Inte provat: kolumnen Nummer i en svensk Excel med tusentalsavgränsare – skriv numren med semikolon, t.ex. 105;305, eller formatera kolumnen som text.
+- Inte provat: namn med det långa s:et (ſ) eller bokstäver ur andra alfabet som bara liknar latinska tvättas inte i supportpaketet – läs igenom paketet innan du skickar det. Dagen i licenstexten tar inte hänsyn till om nästa licens taggtak räcker – kontrollera licensdialogen om du har flera licenser.
+
 ## 1.43.0 – 2026-11-02
 
 Ny funktionsversion. Huvudnyheten är att fasetten Station kan visa bara stationerna i stationslistan. Alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe. Ingen omanalys behövs, men om namnregeln Station ur beskrivningen är på ber programmet om "Kör om analysen" en gång. Namnförslagen ändras inte. Agenten är ny (1.5.3): tvätten av loggarna i agentens supportpaket är förbättrad och INNEHALL.txt anger antalet utelämnade rader – byt den när det passar, den gamla fungerar vidare. Villkoren är oförändrade (1.6).
