@@ -3,6 +3,37 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.45.0 – 2026-11-06
+
+Ny funktionsversion med rapporten Träffsäkerhet och en valfri bilaga till supportpaketet; alla som kör
+programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe – ingen omanalys behövs, och den
+nya agenten (1.5.5) kan bytas när det passar.
+
+- Viktigt: sparade filter med versaler i sökordet kan ge färre träffar. Sökningen följer nu samma regel i
+  alla sökrutor, och ett gement sökord söker som förut. Skriv sökordet med gemener för de gamla träffarna
+  (LÄS_MIG avsnitt 4.5 och 6.1).
+- Nytt: rapporten Träffsäkerhet (fliken Rapport) jämför programmets namnförslag med de namn du rättat eller
+  bekräftat, per namnled och per regel. Förslag i rättningslistor som är för långa eller har tecken som
+  inte godtas ignoreras, och raden läses in (LÄS_MIG avsnitt 8.3.1 och 6.2.4).
+- Nytt: valfri bilaga rattningsfacit.csv i supportpaketet, med de rättade och bekräftade namnen där
+  förslaget avviker. Bilagan är kunddata även när den är anonymiserad, och klartext kräver ett godkännande
+  för varje utskick (LÄS_MIG avsnitt 15.3).
+- Rättat: supportpaketet och agenten 1.5.5 utelämnar loggrader där ett känt namn står med en teckenreferens,
+  till exempel &#xC4; (LÄS_MIG avsnitt 15.3, LÄS_MIG_AGENT.txt avsnitt 11.1).
+- Rättat: licensbannern anger ingen giltig dag när nästa licens inte räcker för taggarna, och en flyttfil med
+  kolumner som räknas ut ur andra kolumner avvisas med ett tydligt besked utan att något ändras (LÄS_MIG
+  avsnitt 10 och 11).
+- Rättat: detaljpanelen visar inte längre en station ur en ändrad stationslista före omanalysen, och
+  stationslistans ledtråd säger semikolon först (LÄS_MIG avsnitt 6.3.2 och 8.9.2).
+- Rättat: Ja i frågan "Någon annan har just ändrat …" skriver bara över det du såg, och radredigeraren
+  visar "Sparar …" när sparningen dröjer (LÄS_MIG avsnitt 6.1 och 6.2).
+- Rättat: i smala fönster syns licensmärket, nyckeltalen och licensdialogen, tabellens ⋮-meny går att nå med
+  detaljpanelen öppen, och filterlistorna läses bättre upp av skärmläsare (LÄS_MIG avsnitt 6.1 och 10).
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast (standardtexten) – prova uppgraderingen i
+  en testinstallation först, särskilt om ni kör programmet som tjänst.
+- Inte provat: bilagan rattningsfacit.csv med riktiga anläggningsdata – läs igenom den innan ni skickar den,
+  och skicka den bara till Mindeu AB.
+
 ## 1.44.0 – 2026-11-04
 
 Ny funktionsversion med stationsnummer i stationslistan; alla som kör programmet berörs, men den är inte brådskande. Byt TaggKontrollPro.exe – ingen omanalys behövs, och den nya agenten (1.5.4) kan bytas när det passar.
