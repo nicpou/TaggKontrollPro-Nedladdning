@@ -3,6 +3,30 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.45.1 – 2026-11-08
+
+Rättningsversion utan nya funktioner för alla som kör programmet; den är inte brådskande, utom för den
+som bekräftar namn tillsammans med kolleger eller använder rapporten Träffsäkerhet. Byt
+TaggKontrollPro.exe – ingen omanalys behövs, och den nya agenten (1.5.6) kan bytas när det passar.
+
+- Viktigt: ett sökord med en versal söker skiftlägeskänsligt i bildkortets sökruta och i iFIX-jämförelsens
+  avvikelselista, som i övriga sökfält. Skriv sökordet med gemener för de gamla träffarna (LÄS_MIG avsnitt
+  4.5 och 6.1).
+- Rättat: ✓ Bekräfta och "Ta bort bekräftelsen" frågar på nytt om en kollega ändrar bekräftelsen medan
+  frågan "Fortsätta ändå?" står öppen, i stället för att skriva över ändringen (LÄS_MIG avsnitt 6.2.2).
+- Rättat: supportpaketet utelämnar namn med teckenreferenser utan semikolon och med Windows-1252-koder,
+  "Slå upp alias" klarar stationerna i bilagan rattningsfacit.csv, och kryssrutan för bilagan visar varför
+  den inte kan väljas. Agenten 1.5.6 utelämnar också sådana rader (LÄS_MIG avsnitt 15.3, LÄS_MIG_AGENT.txt
+  avsnitt 11.1).
+- Rättat: flyttfiler som inte kan kontrolleras ger ett besked med fel-id, och en flyttfil med en virtuell
+  tabell avvisas i stället för att läsas in. Rapporten Träffsäkerhet stoppar inte programmet vid ett internt
+  fel och säger när sparade jämförelsepunkter inte kunde läsas (LÄS_MIG avsnitt 8.3.1 och 11).
+- Rättat: licensmärket, dagarna kvar och licensdialogen fungerar bättre i smala fönster, och i filterlistor
+  med fler än 300 värden stannar fokus på det valda värdet (LÄS_MIG avsnitt 6.1 och 10).
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast – prova i en testinstallation först, särskilt
+  om ni kör programmet som tjänst. Namngivna teckenreferenser utan semikolon (t.ex. &auml) avkodas inte –
+  läs igenom supportpaketet innan du skickar det.
+
 ## 1.45.0 – 2026-11-06
 
 Ny funktionsversion med rapporten Träffsäkerhet och en valfri bilaga till supportpaketet; alla som kör
