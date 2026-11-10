@@ -3,6 +3,19 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.46.0 – 2026-11-10
+
+Funktions- och rättningsversion för alla som kör programmet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är oförändrad.
+
+- Nytt: kryssrutan "Bilagan i klartext" i supportpaketet ger bilagan rattningsfacit.csv i klartext medan resten av paketet är anonymiserat, med godkännande för varje utskick (LÄS_MIG avsnitt 15.3).
+- Nytt: kryssrutan Valfri i Ny signal och Nytt delobjekt (LÄS_MIG avsnitt 7.12). En äldre version (1.45.x) kan inte besluta en Nästa version med en sådan ändring – besluta den i 1.46.0.
+- Nytt: modelljämförelsen visar en signal eller ett delobjekt som blivit valfri eller obligatorisk som "Ändrat krav" (LÄS_MIG avsnitt 7.7).
+- Rättat: Slå upp alias i supportpaketet godtar bara 8 tecken 0–9 och a–f, och ett annat värde ger ett fast besked utan att värdet skrivs i beskedet eller i loggen (LÄS_MIG avsnitt 15.3).
+- Rättat: supportpaketet räknar virtuella tabeller i databasen bara som antal, utan namn och modul. Kvittot efter Exportera allt för flytt varnar när datamappens databas har en sådan tabell (LÄS_MIG avsnitt 11 och 15.3).
+- Rättat: en sortering på Trafikslag avbryts med ett besked om stationslistan eller sammanslagningen ändras under tiden, i stället för att ge en tyst fel ordning (LÄS_MIG avsnitt 6.1).
+- Rättat: sidhuvudet, licensmärket, licensdialogen och stationslistans sida i smala fönster (LÄS_MIG avsnitt 10 och 8.9.2). Med bara inkorgens piller kan sidan fortfarande rulla i sidled vid 481–521 px.
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast. Bilagan i klartext har bara provats med testdata.
+
 ## 1.45.1 – 2026-11-08
 
 Rättningsversion utan nya funktioner för alla som kör programmet; den är inte brådskande, utom för den
