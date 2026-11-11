@@ -3,6 +3,25 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.46.1 – 2026-11-11
+
+Rättningsversion med en säkerhetsrättning för alla som kör programmet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade.
+
+- Säkerhet: en manipulerad flyttfil kunde få programmet att köra främmande databaskommandon när ett supportpaket skapades eller Ersätt användare kördes. Namnen citeras nu korrekt, och flyttfiler med sådana namn avvisas. Råd, som gäller tidigare versioner: läs bara in flyttfiler från er egen installation eller från Mindeu AB (LÄS_MIG avsnitt 11). Har ni läst in en flyttfil från någon annan: uppgradera innan ni skapar ett supportpaket eller kör Ersätt användare – efter uppgraderingen varnar programmet vid start, och namnen är då ofarliga.
+- Rättat: en ändrad flyttfil med fel i stationslistans tabeller låser inte längre stationslistan – läs in listan igen direkt (LÄS_MIG avsnitt 8.9.2).
+- Rättat: stationslistor i CSV med en titelrad som nämner koden läses nu in med rätt rubrikrad (LÄS_MIG avsnitt 8.9.2).
+- Rättat: sidhuvudet rullar inte längre i sidled i ett smalt fönster när bara Inkorg visas, och licensmärket visar Läsläge och Demoläge helt (LÄS_MIG avsnitt 10).
+- Rättat: licensdialogen: ett långt kundnamn utan blanksteg bryts på flera rader i stället för att tabellen rullar i sidled (LÄS_MIG avsnitt 10).
+- Rättat: supportpaketet: i ett anonymiserat paket står tabeller som inte kommer från TaggKontroll Pro under alias i databas.json, eftersom namnet kan vara ert (LÄS_MIG avsnitt 15.3).
+- Nytt i supportpaketet: paketet märks med sitt läge (anonymiserat, med bilaga, klartext) i zip-filens kommentar, så att felrapporten kan stoppa paket med namn i klartext (LÄS_MIG avsnitt 15.3).
+- Felrapporten (assistenten, kundagent 1.1.15) tar inte emot ett supportpaket med bilagan rattningsfacit.csv eller med namn i klartext. Texterna säger vilket paket som ska laddas upp: förvalet (anonymiserat, utan bilagan rattningsfacit.csv).
+- Inte provat: Windows 10 och 11, filvalsdialoger och högkontrast (standardtexten).
+
+Kända begränsningar:
+- CHECK-villkor i stationslistans tabeller prövas inte när en flyttfil läses in.
+- I smala fönster kan sidhuvudet bli tre rader (125 px) när tre piller visas.
+- Med fem eller fler licenser kan licensdialogen rulla 1 px i sidled.
+
 ## 1.46.0 – 2026-11-10
 
 Funktions- och rättningsversion för alla som kör programmet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är oförändrad.
