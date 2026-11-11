@@ -3,6 +3,13 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.46.2 – 2026-11-11
+
+Säkerhetsversion utan funktionsändringar för alla som kör programmet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är ombyggd med samma rättade Go-version och är oförändrad i funktion. Data, licens och villkor är oförändrade.
+
+- Säkerhet: programmen är byggda med Go 1.27.4 i stället för en version med sårbarheten GO-2026-6859 (CVE-2026-97054) i standardbibliotekets HTTP-server. En för stor uppladdning kunde där få servern att krascha när gränsen överskreds i samma ögonblick som svaret skrevs. Programmets webbserver lyssnar bara på 127.0.0.1. Rekommendation: uppgradera vid tillfälle, i första hand installationer som kör programmet som tjänst med flera användare (LÄS_MIG avsnitt 4.5).
+- Den som kör 1.46.0 eller äldre ska uppgradera för säkerhetsrättningen i 1.46.1 (flyttfiler): läs bara in flyttfiler från er egen installation eller från Mindeu AB (LÄS_MIG avsnitt 11).
+
 ## 1.46.1 – 2026-11-11
 
 Rättningsversion med en säkerhetsrättning för alla som kör programmet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade.
