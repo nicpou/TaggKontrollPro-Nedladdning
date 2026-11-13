@@ -3,6 +3,17 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.47.0 – 2026-11-13
+
+Funktionsversion. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är ombyggd men oförändrad i funktion. Data, licens och villkor är oförändrade.
+
+- Nytt: fliken Modellkoppling. Läs in en målmodell (NodeSet2) från ett nytt överordnat system, koppla datamodellens typer och variabler med streck, se förslag med skäl och exportera kopplingen som tabell med varningar (LÄS_MIG avsnitt 7.17–7.20).
+- Nytt: en koppling vars källtyp inte längre finns i datamodellen kan tas bort i fönstret. Borttagningen kan inte ångras.
+- Säkerhet: en gräns för minnet vid inläsning av NodeSet-filer. Vanliga modeller påverkas inte (LÄS_MIG avsnitt 7.17).
+- Rättat: stationslistan töms inte när en nyare version har öppnat datamappen (LÄS_MIG avsnitt 8.9.2).
+- Rättat: anonymiserade supportpaket innehåller inte längre databaskontrollens feltext (LÄS_MIG avsnitt 15.3).
+- Rekommendation: uppgradera vid tillfälle. Den som kör 1.46.0 eller äldre ska också ha uppgraderat för säkerhetsrättningen i 1.46.1 (flyttfiler, LÄS_MIG avsnitt 11).
+
 ## 1.46.2 – 2026-11-11
 
 Säkerhetsversion utan funktionsändringar för alla som kör programmet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är ombyggd med samma rättade Go-version och är oförändrad i funktion. Data, licens och villkor är oförändrade.
