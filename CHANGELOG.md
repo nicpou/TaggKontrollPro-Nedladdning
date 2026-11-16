@@ -3,6 +3,16 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.48.0 – 2026-11-16
+
+Funktionsversion. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade. Datamodellen ändras inte.
+
+- Nytt: flera sparade målmodeller, en aktiv åt gången, med egna kopplingar i varje (LÄS_MIG avsnitt 7.21).
+- Nytt: egna typer och variabler i målmodellen som tillägg ovanpå filen (LÄS_MIG avsnitt 7.22).
+- Nytt: egen målmodell från noll, som senare kan ersättas med den riktiga filen (LÄS_MIG avsnitt 7.23).
+- Nytt: ändring av regel, datatyp, namn, visningsnamn och beskrivning för variabler ur filen, med återställning och krockhantering (LÄS_MIG avsnitt 7.24).
+- Rekommendation: gå inte tillbaka till 1.47.0 och ändra i Modellkoppling där om ni använder de nya funktionerna (LÄS_MIG avsnitt 7.25).
+
 ## 1.47.0 – 2026-11-13
 
 Funktionsversion. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är ombyggd men oförändrad i funktion. Data, licens och villkor är oförändrade.
