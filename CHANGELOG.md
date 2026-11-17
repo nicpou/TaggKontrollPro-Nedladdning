@@ -3,6 +3,17 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.49.0 – 2026-11-17
+
+Funktionsversion. Byt TaggKontrollPro.exe – ingen omanalys behövs för att starta, men kör om analysen efter att ett anläggningsregister har lästs in. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade. Datamodellen ändras inte.
+
+- Nytt: anläggningsregistret, som läses in under Inställningar, med visning, export och ersättning (LÄS_MIG avsnitt 8.9.3).
+- Nytt: namnregeln Station ur anläggningsregistret, på från början och kan stängas av (LÄS_MIG avsnitt 6.3.3).
+- Nytt: typen ur registret i kolumnen Transportsystem (LÄS_MIG avsnitt 6.1).
+- Nytt: kontrollistor för registret (LÄS_MIG avsnitt 8.9.3).
+- Säkerhet: supportpaketet visar bara antal för registret (LÄS_MIG avsnitt 15.3).
+- Rekommendation: kör om analysen efter att ett register har lästs in. Går ni tillbaka till 1.48.0 med ett register inläst visar den en upplysning om att analysen behöver köras om. Inga data skadas.
+
 ## 1.48.0 – 2026-11-16
 
 Funktionsversion. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade. Datamodellen ändras inte.
