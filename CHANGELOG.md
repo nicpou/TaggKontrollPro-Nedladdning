@@ -3,6 +3,16 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.51.0 – 2026-11-20
+
+Rättningsversion med en liten nyhet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten har version 1.5.7 (ombyggd, oförändrad i funktion – behöver inte bytas). Data, licens och villkor är oförändrade.
+
+- Nytt: kolumnen Station i taggarna i Visa registret… visar stationen som taggarna med anläggningsnumret får (LÄS_MIG avsnitt 8.9.3).
+- Rättat: Ångra för en fastställd källtyp gäller bara i den databas och omgång där åtgärden gjordes (LÄS_MIG avsnitt 7.26).
+- Rättat: listan Typen motsäger registret visas också när bara stationslistan eller sammanslagningen har ändrats sedan analysen (LÄS_MIG avsnitt 8.9.3).
+- Rättat: Ångra i typkartan fungerar efter att en typ bytt namn i en ny modellversion (LÄS_MIG avsnitt 8.9.3).
+- Säkerhet: en antivirusmotor av 66 hos VirusTotal (McAfeeD) varnar för zip-filen men inte för programfilerna i den; samma motor varnar sedan 2026-11-20 också för den oförändrade zip-filen till 1.49.0, som den tidigare bedömde som ren. Bedömt som falsklarm och anmält till McAfee – se versionens beskrivning under Releases.
+
 ## 1.50.0 – 2026-11-20
 
 Funktionsversion. Byt TaggKontrollPro.exe. Har ni ett anläggningsregister ber programmet om en omanalys en gång efter uppgraderingen. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade.
