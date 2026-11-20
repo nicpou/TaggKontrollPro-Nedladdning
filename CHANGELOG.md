@@ -3,6 +3,17 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.50.0 – 2026-11-20
+
+Funktionsversion. Byt TaggKontrollPro.exe. Har ni ett anläggningsregister ber programmet om en omanalys en gång efter uppgraderingen. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade.
+
+- Nytt: typkontroll mot anläggningsregistret – ett förslag vars typ hör till en annan anläggningstyp sänks till Rättad – osäker (LÄS_MIG avsnitt 8.9.3).
+- Nytt: kolumnerna och filtren Fabrikat och Modell i taggtabellen (LÄS_MIG avsnitt 6.1).
+- Nytt: fliken Instanser i Modellkoppling, med Fastställ källtyp för en eller flera instanser (LÄS_MIG avsnitt 7.26).
+- Nytt: rapporten Signalbild – signaler och larm per anläggningstyp, fabrikat och modell (LÄS_MIG avsnitt 8.3.2).
+- Rättat: taggar med sida i registret hamnade under en station som inte fanns i stationslistan. Felet fanns i 1.49.0 (LÄS_MIG avsnitt 6.3.3).
+- Säkerhet: en antivirusmotor av 54 hos VirusTotal (McAfeeD) varnar för zip-filen men inte för programfilerna i den. Bedömt som falsklarm och anmält till McAfee 2026-11-20 – se versionens beskrivning under Releases.
+
 ## 1.49.0 – 2026-11-17
 
 Funktionsversion. Byt TaggKontrollPro.exe – ingen omanalys behövs för att starta, men kör om analysen efter att ett anläggningsregister har lästs in. Agenten (1.5.6) är oförändrad. Data, licens och villkor är oförändrade. Datamodellen ändras inte.
