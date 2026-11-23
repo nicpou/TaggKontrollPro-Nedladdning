@@ -3,6 +3,14 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.53.0 – 2026-11-23
+
+Liten version. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade.
+
+- Nytt: knappen Ord med möjlig rest… i Inställningar → Anläggningsregistret visar de ord som mätningen för regelarbete i supportpaketet räknar som möjlig rest. Listan finns bara på skärmen: den sparas inte, kan inte exporteras från programmet och ingår inte i supportpaketet. Programmet skickar fortfarande ingenting (LÄS_MIG avsnitt 8.9.3).
+- Ändrat: tydligare orsakstexter när mätningen för regelarbete inte kan göras (LÄS_MIG avsnitt 15.3).
+- Säkerhet: alla motorer hos VirusTotal bedömer filerna som rena. Programfilerna finns också som egna nedladdningar bredvid zip-filen.
+
 ## 1.52.0 – 2026-11-23
 
 Liten version. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade.
