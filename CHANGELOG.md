@@ -3,6 +3,14 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.52.0 – 2026-11-23
+
+Liten version. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade.
+
+- Nytt: supportpaketet har filen regelarbete_matning.json och raden "Regelarbete:" i INNEHALL.txt – en mätning av en tvätt av namn för en kommande funktion, bara antal, andelar och tider. Programmet skickar fortfarande ingenting (LÄS_MIG avsnitt 15.3).
+- Nytt i leveransen: programfilerna finns också som egna nedladdningar bredvid zip-filen, för den vars antivirusprogram stoppar zip-filen.
+- Säkerhet: alla motorer hos VirusTotal bedömer filerna som rena. Varningen från en motor (McAfeeD) för zip-filerna till 1.49.0–1.51.0 gäller inte zip-filen till 1.52.0.
+
 ## 1.51.0 – 2026-11-20
 
 Rättningsversion med en liten nyhet. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten har version 1.5.7 (ombyggd, oförändrad i funktion – behöver inte bytas). Data, licens och villkor är oförändrade.
