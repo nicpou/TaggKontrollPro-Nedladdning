@@ -3,6 +3,18 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.54.0 – 2026-11-24
+
+Två nya funktioner. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade.
+
+- Nytt: Samma rättning för liknande taggar – efter en manuell rättning erbjuds samma byte för taggar med samma led och samma förslag, med förhandsvisning och Ångra. Rättade och bekräftade namn hoppas alltid över. Rättningen sparas per taggnamn; granska raderna före körningen (LÄS_MIG avsnitt 6.2.5).
+- Nytt: har det rättade namnet exakt ett led mer än förslaget erbjuds samma insättning, när platsen är entydig (LÄS_MIG avsnitt 6.2.5).
+- Nytt: rapporten Träffsäkerhet och vyn Manuella rättningar redovisar Samma rättning som egen källa (LÄS_MIG avsnitt 8.3.1).
+- Nytt: rapporten Namnformer per nod visar vilka former taggnamnen har per nod, bedömning och orsak (LÄS_MIG avsnitt 8.3.3).
+- Nytt: supportpaketet kan ta med filen namnformer.csv med former och antal, inga taggnamn – en ruta i dialogen som är av från början (LÄS_MIG avsnitt 15.3).
+- Ändrat: ord med bokstäver ur en annan skrift än den latinska märks "annan skrift" i listan Ord med möjlig rest (LÄS_MIG avsnitt 8.9.3).
+- Säkerhet: alla motorer hos VirusTotal bedömer filerna som rena. Programfilerna finns också som egna nedladdningar bredvid zip-filen.
+
 ## 1.53.0 – 2026-11-23
 
 Liten version. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade.
