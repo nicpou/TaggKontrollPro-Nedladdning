@@ -3,6 +3,18 @@
 Sammanfattning av vad som är nytt i varje publicerad version. Fullständiga beskrivningar finns i
 `LÄS_MIG.txt` i respektive version. De fem senaste versionerna hålls tillgängliga under Releases.
 
+## 1.55.0 – 2026-11-25
+
+Ny funktion: GVL-kontroll. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade. Det går att gå tillbaka till 1.54.0.
+
+- Nytt: GVL-kontroll – ny flik som läser GVL-filer i Excel, en fil per skåp, ur en mapp med undermappar, en zip-fil eller en mapp på servern, och kontrollerar dem mot datamodellens namnstandard och typer och mot filen själv. Avvikelserna visas per station, skåp, blad och rad med nivå, filter och export. Ingår i alla licenser. Kontrollen är ny och provad med syntetiska filer, inte med verkliga (LÄS_MIG avsnitt 7.27).
+- Nytt: under Vad kontrolleras… väljer ni vilka slag av avvikelser som kontrolleras (LÄS_MIG avsnitt 7.27).
+- Nytt: supportpaketet kan ta med GVL-kontrollen som antal, former och tider, inga namn ur filerna – en ruta i dialogen som är av från början (LÄS_MIG avsnitt 15.3).
+- Nytt: gemensam brytare för Samma rättning under Inställningar, kortet Manuell rättning (LÄS_MIG avsnitt 6.2.5).
+- Ändrat: när ingen samma rättning kan erbjudas visas varför, och en äldre rättning utan sparat förslag får erbjudandet ur dagens förslag, märkt så (LÄS_MIG avsnitt 6.2.5).
+- Ändrat: alla Excelinläsningar kontrollerar filens uppbyggnad först. En fil med fler än 64 nivåer nästlade element, en annan teckenkodning än UTF-8, Latin-1 eller Windows-1252, eller två delar med samma namn avvisas med ett besked – spara om filen i Excel (LÄS_MIG avsnitt 5.4).
+- Säkerhet: alla motorer hos VirusTotal bedömer filerna som rena. Programfilerna finns också som egna nedladdningar bredvid zip-filen.
+
 ## 1.54.0 – 2026-11-24
 
 Två nya funktioner. Byt TaggKontrollPro.exe – ingen omanalys behövs. Agenten (1.5.7) är oförändrad och behöver inte bytas. Data, licens och villkor är oförändrade.
